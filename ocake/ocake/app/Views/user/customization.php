@@ -1,11 +1,9 @@
- <!-- End Header Area -->
-
- <div class="breadcrumbs">
+<div class="breadcrumbs">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="breadcrumbs-content">
-                        <h1 class="page-title">Customization</h1>
+                        <h1 class="page-title"><?php echo $occasion?> Category</h1>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
@@ -24,22 +22,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12">
-
                     <div class="product-sidebar">
 
                         <div class="single-widget search">
-                            <h3>Search Product</h3>
+                            <h3>Price Table</h3>
                             <form action="#">
-                                <input type="text" placeholder="Search Here...">
-                                <button type="submit"><i class="lni lni-search-alt"></i></button>
+                                <div class="row">
+                                    <div class="col-lg-3 col-12">
+                                        <?//php foreach($order as $data){?>
+                                        <div>
+                                            <span>
+                                                <img style="height:50px" src="http://localhost/ocake/uploads/<?php //echo $data->image;?>" alt="I'm Cake">
+                                                    200
+                                                    x1
+                                            </span>
+                                        </div>
+                                        <?//php}?>
+                                    </div>
+                                </div>
                             </form>
                         </div>
 
-
-                       
-
-
-                        <div class="single-widget range">
+                        <!-- <div class="single-widget range">
                             <h3>Price Range</h3>
                             <input type="range" class="form-range" name="range" step="1" min="100" max="10000"
                                 value="10" onchange="rangePrimary.value=value">
@@ -48,9 +52,7 @@
                                 <input type="text" id="rangePrimary" placeholder="100" />
                             </div>
                         </div>
-
-
-                      
+    
                         <div class="single-widget condition">
                             <h3>Filter by Brand</h3>
                             <div class="form-check">
@@ -101,10 +103,8 @@
                                     Panasonic (74)
                                 </label>
                             </div>
-                        </div>
-
+                        </div> -->
                     </div>
-
                 </div>
                 <div class="col-lg-9 col-12">
                     <div class="product-grids-head">
@@ -114,51 +114,48 @@
                                     <div class="product-sorting">
                                         <!-- <label for="sorting">Colors</label> -->
                                         <select class="form-control" id="sorting">
-                                            <option value="" disabled selected>Pre-Define Design</option>
-                                            <option>Low - High Price</option>
-                                            <option>High - Low Price</option>
-                                            <option>Average Rating</option>
-                                            <option>A - Z Order</option>
-                                            <option>Z - A Order</option>
-                                        </select>  
+                                            <option value="" disabled selected>Layers</option>
+                                            <?php foreach($custom_design as $data){?>
+                                            <option><?php echo $data->layer;?></option>
+                                            <?php }?>
+                                        </select> 
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-8 col-12">
                                     <div class="product-sorting">
                                         <!-- <label for="sorting">Sort by:</label> -->
                                         <select class="form-control" id="sorting">
-                                        <option value="" disabled selected>Layers</option>
-                                            <option>Low - High Price</option>
-                                            <option>High - Low Price</option>
-                                            <option>Average Rating</option>
-                                            <option>A - Z Order</option>
-                                            <option>Z - A Order</option>
+                                            <option value="" disabled selected>Shapes</option>
+                                            <option id="demo" onclick="myFunction()">Circle</option>
+                                            <option>Square</option>
                                         </select>  
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-8 col-12">
                                     <div class="product-sorting">
-                                        <select class="form-control" id="sorting">
-                                        <option value="" disabled selected>Shapes</option>
-                                            <option>Low - High Price</option>
-                                            <option>High - Low Price</option>
-                                            <option>Average Rating</option>
-                                            <option>A - Z Order</option>
-                                            <option>Z - A Order</option>
-                                        </select>  
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-8 col-12">
-                                    <div class="product-sorting">
-                                        <!-- <label for="sorting">Sort by:</label> -->
-                                        <select class="form-control" id="sorting">
+                                    <select class="form-control" id="sorting">
                                         <option value="" disabled selected>Colors</option>
-                                            <option>Low - High Price</option>
-                                            <option>High - Low Price</option>
-                                            <option>Average Rating</option>
-                                            <option>A - Z Order</option>
-                                            <option>Z - A Order</option>
-                                        </select>  
+                                            <option>White</option>
+                                            <option>Black</option>
+                                            <option>Red</option>
+                                            <option>Brown</option>
+                                            <option>Blue</option>
+                                            <option>Pink</option>
+                                            <option>Green</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-8 col-12">
+                                    <div class="product-sorting">
+                                        <!-- <label for="sorting">Sort by:</label> -->
+                                        <select class="form-control" id="sorting">
+                                            <option value="" disabled selected>Flavor</option>
+                                            <option>Vanilla</option>
+                                            <option>Chocolate</option>
+                                            <option>Mocha</option>
+                                            <option>Strawberry</option>
+                                            <option>Red Velvet</option>
+                                        </select> 
                                     </div>
                                 </div>
                                
@@ -169,52 +166,9 @@
                             <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
                                 aria-labelledby="nav-grid-tab">
                                 <div class="row">
-                                    <?php $num = 1;
+                                    
                                           
-                          foreach ($product as $data) { ?>
-                                    <div class="col-lg-4 col-md-6 col-12">
-
-                                        <div class="single-product">
-                                            <div class="product-image">
-                                                <img src="http://localhost/ocake/uploads/<?php echo $data->image;?>"
-                                                    alt="#">
-                                                <div class="button">
-                                                    <form action="<?=site_url('add_cart')?>" method="POST">
-                                                    <input type="hidden" name="uid" value="<?=session('id')?>">
-                                                        <input type="hidden" name="occasion"
-                                                            value="<?=$data->occasion;?>">
-                                                        <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
-                                                        <input type="hidden" name="price" value="<?=$data->price;?>">
-                                                        <input type="hidden" name="pid" value="<?=$data->id;?>">
-                                                        <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
-                                                        <button type="submit" class="btn"><i class="lni lni-cart"></i>
-                                                            Add to Cart</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <div class="product-info">
-                                                <span class="category"> <?php echo $data->flavor; ?></span>
-                                                <h4 class="title">
-                                                    <a href="product-grids.html"><?php echo $data->occasion; ?> Cake</a>
-                                                </h4>
-                                                <ul class="review">
-                                                    <li><i class="lni lni-star-filled"></i></li>
-                                                    <li><i class="lni lni-star-filled"></i></li>
-                                                    <li><i class="lni lni-star-filled"></i></li>
-                                                    <li><i class="lni lni-star-filled"></i></li>
-                                                    <li><i class="lni lni-star"></i></li>
-                                                    <li><span>4.0 Review(s)</span></li>
-                                                </ul>
-                                                <div class="price">
-                                                    <span>&#8369 <?php echo $data->price; ?></span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <?php }
-                                ?>
+                                    
                                     <div class="col-lg-12 row-12">
                                             <div class="product-grids-head">
                                                 <div class="product-grid-topbar">
@@ -223,46 +177,136 @@
                                                             <div class="product-sorting">
                                                             </div>
                                                         </div>
-                                                            
-
-                                                        </div>
                                                     </div>
-                                                        <div class="row">
-                                                        <div class="col-12">
-
-                                                        <div class="box-drag">
-                                                            <div class="drag-el" draggable="true">W</div>
+                                                </div><br>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="col-lg-3 col-md-8 col-12">
+                                                            <div class="product-sorting">
+                                                            </div>
                                                         </div>
-                                                        <div class="box-drag">
-                                                            <div class="drag-el"draggable="true">O</div>
+                                                            <!-- <div class="product-grid-topbar">
+                                                                <h6 class="m-0 font-weight-bold">Cake Add Ons</h6>
+                                                            </div> -->
+                                                        <div id="conteudo-left" style="left:10px; top:20px; width:10; height:10; z-index:-1; overflow: auto">
+                                                            <div class="product-grid-topbar">
+                                                                <h6 class="m-0 font-weight-bold">Cake Add Ons</h6>
+                                                            </div>
+                                                            
+                                                            <form name="form_dnd_left" class="m-2 text-center">
+                                                                <?php foreach($custom_addons as $data){?>
+                                                                    <span>
+                                                                            <img id="<?php echo "addon".$data->add_ons_id;?>" style="width:50px; height:50px" 
+                                                                            src="http://localhost/ocake/uploads/<?php echo $data->image;?>"  alt="" />
+                                                                    </span>
+                                                                <?php }?>
+                                                                <!-- <div>
+                                                                    <img id="ball" style="width:50px; height:50px; position:absolute" src="http://localhost/ocake/uploads/berry.png"  alt="" />
+                                                                    <img id="ball1" style="width:50px; height:50px; position:absolute" src="http://localhost/ocake/uploads/berry.png"  alt="" />
+                                                                </div> -->
+                                                            </form>
                                                         </div>
-                                                        <div class="box-drag">
-                                                            <div class="drag-el"draggable="true">W</div>
+                                                        
+                                                            <div class="product-grid-topbar" style="width:545px;"> 
+                                                                <h6 class="m-0 font-weight-bold">Your Customize Cake</h6>
+                                                            </div>
+                                                        <!-- <div class="conteudo" id="conteudo"> -->
+                                                        <form class="conteudo" id="conteudo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                                </form>
 
-                                                            <div class ="droptarget">
-                                                        </div>
-
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
                                     </div>
+                         </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <a href="#" class="scroll-top">
         <i class="lni lni-chevron-up"></i>
     </a>
-
-    <!-- <script src="assets/js/customization.js"></script> -->
+    
+    <link rel="stylesheet" href="assets/css/copy.css" />
+    <!-- <script src="assets/js/copy.js"></script> -->
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
+    <!-- <script src="assets/js/tiny-slider.js"></script> -->
     <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+    <!-- <script src="assets/js/main.js"></script> -->
 
+<script>
+    function myFunction(){
+        document.getElementById("demo").innerHTML = "YOU CLICKED ME.";
+    }
+</script>
+
+    <script>
+        let currentDroppable = null;
+        <?php foreach($custom_addons as $data){?>  
+        <?php echo "addon".$data->add_ons_id;?>.onmousedown = function(event) {
+
+        let shiftX = event.clientX - <?php echo "addon".$data->add_ons_id;?>.getBoundingClientRect().left;
+        let shiftY = event.clientY -<?php echo "addon".$data->add_ons_id;?>.getBoundingClientRect().top;
+
+        <?php echo "addon".$data->add_ons_id;?>.style.position = 'absolute';
+        <?php echo "addon".$data->add_ons_id;?>.style.zIndex = 1000;
+        document.body.append(<?php echo "addon".$data->add_ons_id;?>);
+
+        moveAt(event.pageX, event.pageY);
+
+        function moveAt(pageX, pageY) {
+            <?php echo "addon".$data->add_ons_id;?>.style.left = pageX - shiftX + 'px';
+            <?php echo "addon".$data->add_ons_id;?>.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+
+        <?php echo "addon".$data->add_ons_id;?>.hidden = true;
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        <?php echo "addon".$data->add_ons_id;?>.hidden = false;
+
+        if (!elemBelow) return;
+
+        let droppableBelow = elemBelow.closest('.droppable');
+        if (currentDroppable != droppableBelow) {
+            if (currentDroppable) { // null when we were not over a droppable before this event
+            leaveDroppable(currentDroppable);
+            }
+            currentDroppable = droppableBelow;
+            if (currentDroppable) { // null if we're not coming over a droppable now
+            // (maybe just left the droppable)
+            enterDroppable(currentDroppable);
+            }
+        }
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        <?php echo "addon".$data->add_ons_id;?>.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        <?php echo "addon".$data->add_ons_id;?>.onmouseup = null;
+        };
+
+        };
+
+        function enterDroppable(elem) {
+            elem.style.background = 'pink';
+        }
+
+        function leaveDroppable(elem) {
+            elem.style.background = '';
+        }
+
+        <?php echo "addon".$data->add_ons_id;?>.ondragstart = function() {
+            return false;
+        };
+        <?php }?>
+    </script>
+
+
+</body>
 </html>
