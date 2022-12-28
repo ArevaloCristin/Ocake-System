@@ -1,0 +1,328 @@
+CRITICAL - 2022-11-30 00:55:42 --> Unmatched '}'
+in APPPATH\Controllers\User.php on line 182.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\User.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\User', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 00:55:45 --> Unmatched '}'
+in APPPATH\Controllers\User.php on line 182.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\User.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\User', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 00:55:46 --> Unmatched '}'
+in APPPATH\Controllers\User.php on line 182.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\User.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\User', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 00:55:47 --> Unmatched '}'
+in APPPATH\Controllers\User.php on line 182.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\User.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\User', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 01:23:49 --> Undefined variable $product
+in APPPATH\Views\user\birthday.php on line 559.
+ 1 APPPATH\Views\user\birthday.php(559): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH\\Views\\user\\birthday.php', 559)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(101): view('user/birthday')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 02:20:59 --> Undefined property: stdClass::$occassion
+in APPPATH\Views\user\birthday.php on line 573.
+ 1 APPPATH\Views\user\birthday.php(573): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$occassion', 'APPPATH\\Views\\user\\birthday.php', 573)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(85): view('user/birthday', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 02:31:25 --> Undefined variable $data
+in APPPATH\Views\user\birthday.php on line 558.
+ 1 APPPATH\Views\user\birthday.php(558): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\birthday.php', 558)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(85): view('user/birthday', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:13:05 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(164): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->prod_update('Birthday', '20', 'ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:37:17 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGraduation()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:46:06 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:46:31 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:51:22 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:51:33 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 03:52:26 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:02:21 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(38): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:22:32 --> Undefined variable $product
+in APPPATH\Views\user\valentine.php on line 559.
+ 1 APPPATH\Views\user\valentine.php(559): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH\\Views\\user\\valentine.php', 559)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\valentine.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/valentine', [], true)
+ 5 APPPATH\Controllers\User.php(141): view('user/valentine')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->valentine()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:22:38 --> Undefined variable $product
+in APPPATH\Views\user\valentine.php on line 559.
+ 1 APPPATH\Views\user\valentine.php(559): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH\\Views\\user\\valentine.php', 559)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\valentine.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/valentine', [], true)
+ 5 APPPATH\Controllers\User.php(141): view('user/valentine')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->valentine()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:23:51 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:24:52 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:31:35 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:44:42 --> Undefined variable $data
+in APPPATH\Views\user\birthday.php on line 355.
+ 1 APPPATH\Views\user\birthday.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\birthday.php', 355)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(95): view('user/birthday', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:44:43 --> Undefined variable $data
+in APPPATH\Views\user\birthday.php on line 355.
+ 1 APPPATH\Views\user\birthday.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\birthday.php', 355)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(95): view('user/birthday', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:44:48 --> Undefined variable $data
+in APPPATH\Views\user\birthday.php on line 355.
+ 1 APPPATH\Views\user\birthday.php(355): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\birthday.php', 355)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\birthday.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 5 APPPATH\Controllers\User.php(95): view('user/birthday', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getChristening()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:49:48 --> Call to undefined method App\Models\Product_model::getGraduation
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Model->__call('getGraduation', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 04:58:23 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(164): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->prod_update('Graduation', '53', 'ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 05:02:53 --> Invalid file: user/halloween.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/halloween.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/halloween', [], true)
+ 3 APPPATH\Controllers\User.php(151): view('user/halloween', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getHalloween()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 05:02:58 --> Invalid file: user/halloween.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/halloween.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/halloween', [], true)
+ 3 APPPATH\Controllers\User.php(151): view('user/halloween', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getHalloween()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 05:03:10 --> Invalid file: user/valentine.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/valentine.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/valentine', [], true)
+ 3 APPPATH\Controllers\User.php(177): view('user/valentine', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getValentine()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 05:03:14 --> Invalid file: user/graduation.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/graduation.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/graduation', [], true)
+ 3 APPPATH\Controllers\User.php(115): view('user/graduation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 05:03:41 --> Invalid file: user/valentine.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/valentine.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/valentine', [], true)
+ 3 APPPATH\Controllers\User.php(177): view('user/valentine', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getValentine()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 05:05:09 --> Invalid file: user/graduation.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/graduation.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/graduation', [], true)
+ 3 APPPATH\Controllers\User.php(115): view('user/graduation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getGrad()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-30 05:40:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ocake`.`tbl_cart`, CONSTRAINT `tbl_cart_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\app\Controllers\CartController.php(50): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\system\CodeIgniter.php(927): App\Controllers\CartController->add_cart()
+#9 C:\xampp\htdocs\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\xampp\htdocs\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ocake\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-11-30 20:32:53 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(39): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

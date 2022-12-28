@@ -1,0 +1,88 @@
+CRITICAL - 2022-11-21 05:19:37 --> Invalid file: login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Personal.php(9): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:47:47 --> Invalid file: login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Personal.php(9): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:51:15 --> Invalid file: signup.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 3 APPPATH\Controllers\Administration.php(13): view('signup')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:51:32 --> Invalid file: signup.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 3 APPPATH\Controllers\Administration.php(13): view('signup')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:52:17 --> Undefined array key "email"
+in APPPATH\Controllers\Administration.php on line 24.
+ 1 APPPATH\Controllers\Administration.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Controllers\\Administration.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:52:46 --> Invalid file: signup.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 3 APPPATH\Controllers\Administration.php(13): view('signup')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:53:05 --> Invalid file: signup.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 3 APPPATH\Controllers\Administration.php(13): view('signup')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 05:54:00 --> Invalid file: signup.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 3 APPPATH\Controllers\Administration.php(13): view('signup')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-21 06:02:15 --> Invalid file: signup.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('signup', [], true)
+ 3 APPPATH\Controllers\Administration.php(13): view('signup')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Administration->signup()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

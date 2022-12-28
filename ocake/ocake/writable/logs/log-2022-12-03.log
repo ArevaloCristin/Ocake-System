@@ -1,0 +1,234 @@
+CRITICAL - 2022-12-03 15:47:06 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-12-03 21:50:02 --> Call to undefined function site_rl()
+in APPPATH\Views\user\cart.php on line 11.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/cart', [], true)
+ 4 APPPATH\Controllers\User.php(53): view('user/cart')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->cart()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 22:42:48 --> syntax error, unexpected token "echo", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 41.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 22:43:04 --> syntax error, unexpected token "echo", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 41.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 22:43:10 --> Undefined variable $imageFile
+in APPPATH\Controllers\CartController.php on line 38.
+ 1 APPPATH\Controllers\CartController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imageFile', 'APPPATH\\Controllers\\CartController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CartController->add_cart()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-03 22:45:07 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\CartController.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\CartController->add_cart()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-03 22:59:32 --> syntax error, unexpected token "return", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:00:10 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:00:36 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:00:40 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:00:48 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:01:02 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:01:14 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:01:18 --> syntax error, unexpected identifier "redirect", expecting "function" or "const"
+in APPPATH\Controllers\CartController.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:05:43 --> Undefined constant "session"
+in APPPATH\Views\user\birthday.php on line 570.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 4 APPPATH\Controllers\User.php(85): view('user/birthday', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:05:55 --> Undefined constant "session"
+in APPPATH\Views\user\birthday.php on line 570.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/birthday', [], true)
+ 4 APPPATH\Controllers\User.php(85): view('user/birthday', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->getBDay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:15:46 --> Class "App\Controllers\Cart_m" not found
+in APPPATH\Controllers\User.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:16:06 --> Call to undefined method App\Models\Cart_m::getCartData
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\User.php(12): CodeIgniter\Model->__call('getCartData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:19:28 --> Undefined variable $cartData
+in APPPATH\Views\include\header.php on line 165.
+ 1 APPPATH\Views\include\header.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartData', 'APPPATH\\Views\\include\\header.php', 165)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(13): view('include/header')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:21:51 --> Undefined property: stdClass::$ocassion
+in APPPATH\Views\include\header.php on line 176.
+ 1 APPPATH\Views\include\header.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$ocassion', 'APPPATH\\Views\\include\\header.php', 176)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(13): view('include/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:25:38 --> syntax error, unexpected variable "$total", expecting "," or ";"
+in APPPATH\Views\include\header.php on line 189.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 3 APPPATH\Controllers\User.php(13): view('include/header', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:27:47 --> syntax error, unexpected token ")"
+in APPPATH\Views\include\header.php on line 194.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 3 APPPATH\Controllers\User.php(13): view('include/header', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-03 23:30:50 --> mysqli_sql_exception: Column 'uid' cannot be null in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\CartController.php(39): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\CartController->add_cart()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-03 23:34:35 --> Undefined variable $cartData
+in APPPATH\Views\include\header.php on line 166.
+ 1 APPPATH\Views\include\header.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartData', 'APPPATH\\Views\\include\\header.php', 166)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(19): view('include/header')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-03 23:58:34 --> Undefined variable $db
+in APPPATH\Models\Cart_m.php on line 16.
+ 1 APPPATH\Models\Cart_m.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'APPPATH\\Models\\Cart_m.php', 16)
+ 2 APPPATH\Controllers\User.php(12): App\Models\Cart_m->getCartData()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

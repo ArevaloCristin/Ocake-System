@@ -1,0 +1,206 @@
+ERROR - 2022-12-11 01:47:34 --> mysqli_sql_exception: Table 'ocake.product_order' doesn't exist in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\app\Models\Details_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#6 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#7 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-11 01:47:34 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 46.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-11 02:02:29 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-11 03:14:48 --> Trying to get property 'occasion' of non-object
+in APPPATH\Views\admin\orders.php on line 103.
+ 1 APPPATH\Views\admin\orders.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'occasion\' of non-object', 'APPPATH\\Views\\admin\\orders.php', 103, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(41): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 03:15:58 --> Trying to get property 'status' of non-object
+in APPPATH\Views\admin\orders.php on line 112.
+ 1 APPPATH\Views\admin\orders.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status\' of non-object', 'APPPATH\\Views\\admin\\orders.php', 112, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(41): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 04:48:20 --> Undefined variable: occasion
+in APPPATH\Views\admin\orders.php on line 48.
+ 1 APPPATH\Views\admin\orders.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: occasion', 'APPPATH\\Views\\admin\\orders.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(40): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 07:22:36 --> Use of undefined constant t - assumed 't' (this will throw an Error in a future version of PHP)
+in APPPATH\Views\admin\orders.php on line 130.
+ 1 APPPATH\Views\admin\orders.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant t - assumed \'t\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Views\\admin\\orders.php', 130, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(40): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:05:48 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:12:02 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:19:04 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:21:27 --> Illegal string offset 'validation'
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'validation\'', 'APPPATH\\Controllers\\Admin.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:23:30 --> Illegal string offset 'validation'
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'validation\'', 'APPPATH\\Controllers\\Admin.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:42:31 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:49:54 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:50:48 --> Illegal string offset 'validation'
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'validation\'', 'APPPATH\\Controllers\\Admin.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:55:04 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'Pending', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 08:58:31 --> Illegal string offset 'validation'
+in APPPATH\Controllers\Admin.php on line 58.
+ 1 APPPATH\Controllers\Admin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'validation\'', 'APPPATH\\Controllers\\Admin.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 09:00:26 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(59): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 09:14:35 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(55): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-11 09:15:09 --> Undefined variable: order
+in APPPATH\Views\admin\orders.php on line 90.
+ 1 APPPATH\Views\admin\orders.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: order', 'APPPATH\\Views\\admin\\orders.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(55): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->order_update('6', 'C:\\wamp64\\www\\ocake')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

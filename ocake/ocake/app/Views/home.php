@@ -1,0 +1,9 @@
+<?=$this->include('include/top')?>
+<?=$this->include('include/header')?>
+<?=$this->include('include/display')?>
+<?=$this->include('include/trendproduct')?>
+<?=$this->include('include/callaction')?>
+<?=$this->include('include/banner')?>
+<?=$this->include('include/shipping')?>
+<?=$this->include('include/footer')?>
+<?=$this->include('include/end')?>

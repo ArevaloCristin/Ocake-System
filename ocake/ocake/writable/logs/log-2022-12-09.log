@@ -1,0 +1,471 @@
+CRITICAL - 2022-12-09 01:07:16 --> Undefined variable: cartData
+in APPPATH\Views\include\header.php on line 166.
+ 1 APPPATH\Views\include\header.php(166): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cartData', 'APPPATH\\Views\\include\\header.php', 166, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\include\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('include/header', [], true)
+ 5 APPPATH\Controllers\User.php(116): view('include/header')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 05:48:56 --> mysqli_sql_exception: Table 'ocake.cart' doesn't exist in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Cart_m.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\User.php(14): App\Models\Cart_m->getCartData()
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->index()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 05:48:56 --> Call to a member function getResult() on bool
+in APPPATH\Models\Cart_m.php on line 21.
+ 1 APPPATH\Controllers\User.php(14): App\Models\Cart_m->getCartData()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 05:52:08 --> mysqli_sql_exception: Table 'ocake.cart' doesn't exist in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Cart_m.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\User.php(14): App\Models\Cart_m->getCartData()
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\User->index()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 05:52:08 --> Call to a member function getResult() on bool
+in APPPATH\Models\Cart_m.php on line 21.
+ 1 APPPATH\Controllers\User.php(14): App\Models\Cart_m->getCartData()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 05:59:58 --> mysqli_sql_exception: Unknown column 'product_id' in 'field list' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ch...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ch...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ch...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ch...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\CheckoutController.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\CheckoutController->placeorder()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckoutController))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-12-09 06:44:25 --> Undefined property: stdClass::$order_id
+in APPPATH\Views\user\checkout.php on line 359.
+ 1 APPPATH\Views\user\checkout.php(359): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$order_id', 'APPPATH\\Views\\user\\checkout.php', 359)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:46:23 --> Undefined property: stdClass::$detail_id
+in APPPATH\Views\user\checkout.php on line 367.
+ 1 APPPATH\Views\user\checkout.php(367): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$detail_id', 'APPPATH\\Views\\user\\checkout.php', 367)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 06:52:37 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 41.
+ 1 APPPATH\Views\user\checkout.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:02:16 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 41.
+ 1 APPPATH\Views\user\checkout.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:02:21 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 41.
+ 1 APPPATH\Views\user\checkout.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:02:31 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 41.
+ 1 APPPATH\Views\user\checkout.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:02:35 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 41.
+ 1 APPPATH\Views\user\checkout.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:03:21 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 38.
+ 1 APPPATH\Views\user\checkout.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:03:26 --> Undefined variable $data
+in APPPATH\Views\user\checkout.php on line 38.
+ 1 APPPATH\Views\user\checkout.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\user\\checkout.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:04:00 --> Undefined property: stdClass::$order_id
+in APPPATH\Views\user\checkout.php on line 231.
+ 1 APPPATH\Views\user\checkout.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$order_id', 'APPPATH\\Views\\user\\checkout.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:04:05 --> Undefined property: stdClass::$order_id
+in APPPATH\Views\user\checkout.php on line 231.
+ 1 APPPATH\Views\user\checkout.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$order_id', 'APPPATH\\Views\\user\\checkout.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/checkout', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:33:29 --> mysqli_sql_exception: Unknown column 'customer_details' in 'field list' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(42): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-09 07:33:29 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 42.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:33:52 --> mysqli_sql_exception: Unknown column 'customer_details' in 'field list' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(42): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-09 07:33:52 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 42.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:34:24 --> mysqli_sql_exception: Unknown column 'customer_details' in 'field list' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `custome...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `custome...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `custome...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `custome...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(42): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-09 07:34:24 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 42.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:35:55 --> mysqli_sql_exception: Unknown column 'cd.product_id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:35:55 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 43.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:35:56 --> mysqli_sql_exception: Unknown column 'cd.product_id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:35:56 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 43.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 07:47:36 --> Undefined property: stdClass::$image
+in APPPATH\Views\admin\orders.php on line 87.
+ 1 APPPATH\Views\admin\orders.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$image', 'APPPATH\\Views\\admin\\orders.php', 87)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:48:55 --> mysqli_sql_exception: Unknown column 'p.product_id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:48:55 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 46.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-09 07:49:53 --> mysqli_sql_exception: Unknown column 'p.product_id' in 'on clause' in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\app\Models\Details_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+#6 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Admin->orders()
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-09 07:49:53 --> Call to a member function getResult() on bool
+in APPPATH\Models\Details_model.php on line 46.
+ 1 APPPATH\Controllers\Admin.php(40): App\Models\Details_model->fetchProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 08:02:22 --> syntax error, unexpected token "echo"
+in APPPATH\Views\user\cart.php on line 95.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/cart', [], true)
+ 3 APPPATH\Controllers\User.php(106): view('user/cart')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->cart()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 08:23:58 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 84.
+ 1 APPPATH\Views\admin\orders.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 08:25:37 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 84.
+ 1 APPPATH\Views\admin\orders.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 08:25:39 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 84.
+ 1 APPPATH\Views\admin\orders.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 08:29:26 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 84.
+ 1 APPPATH\Views\admin\orders.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 18:55:18 --> Undefined variable $occasion
+in APPPATH\Views\user\customization.php on line 8.
+ 1 APPPATH\Views\user\customization.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Views\\user\\customization.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customization.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customization', [], true)
+ 5 APPPATH\Controllers\User.php(286): view('user/customization')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 19:25:34 --> Undefined variable $occasion
+in APPPATH\Views\user\customization.php on line 8.
+ 1 APPPATH\Views\user\customization.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Views\\user\\customization.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customization.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customization', [], true)
+ 5 APPPATH\Controllers\User.php(286): view('user/customization')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 19:44:03 --> Undefined variable $occasion
+in APPPATH\Views\user\customization.php on line 8.
+ 1 APPPATH\Views\user\customization.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $occasion', 'APPPATH\\Views\\user\\customization.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\customization.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/customization', [], true)
+ 5 APPPATH\Controllers\User.php(286): view('user/customization')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\User->customization()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 21:35:04 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 88.
+ 1 APPPATH\Views\admin\orders.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 21:35:38 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 103.
+ 1 APPPATH\Views\admin\orders.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 103)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 21:35:39 --> Undefined variable $data
+in APPPATH\Views\admin\orders.php on line 103.
+ 1 APPPATH\Views\admin\orders.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\admin\\orders.php', 103)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-09 21:50:05 --> Undefined variable $product
+in APPPATH\Views\admin\orders.php on line 74.
+ 1 APPPATH\Views\admin\orders.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH\\Views\\admin\\orders.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\orders.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/orders', [], true)
+ 5 APPPATH\Controllers\Admin.php(42): view('admin/orders', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->orders()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

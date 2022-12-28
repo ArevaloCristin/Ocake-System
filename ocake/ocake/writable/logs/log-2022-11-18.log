@@ -1,0 +1,200 @@
+CRITICAL - 2022-11-18 09:47:50 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 10:58:25 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 10:58:46 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 11:00:16 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 11:01:23 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 11:07:40 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 11:08:17 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 11:38:24 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-11-18 23:25:04 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:26:03 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:26:04 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:26:05 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:26:31 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:27:06 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:27:32 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:27:34 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:27:46 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:27:48 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:28:27 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:28:28 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:29:31 --> Invalid file: admin/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/login', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('admin/login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:54:44 --> syntax error, unexpected token ")", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:54:48 --> syntax error, unexpected token ")", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-18 23:55:05 --> syntax error, unexpected token ")", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

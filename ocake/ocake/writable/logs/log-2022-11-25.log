@@ -1,0 +1,67 @@
+CRITICAL - 2022-11-25 06:12:53 --> include(): Filename cannot be empty
+in APPPATH\Views\admin\dashboard.php on line 30.
+ 1 APPPATH\Views\admin\dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(): Filename cannot be empty', 'APPPATH\\Views\\admin\\dashboard.php', 30, [])
+ 2 APPPATH\Views\admin\dashboard.php(30): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\Admin.php(11): view('admin/dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 06:48:10 --> Invalid file: admin/sidebar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sidebar.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/sidebar', [], true)
+ 3 APPPATH\Views\admin\product.php(30): view('admin/sidebar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\product.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/product', [], true)
+ 7 APPPATH\Controllers\Admin.php(27): view('admin/product')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->product()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 06:49:44 --> Invalid file: admin/sidebar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sidebar.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/sidebar', [], true)
+ 3 APPPATH\Views\admin\product.php(30): view('admin/sidebar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\product.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/product', [], true)
+ 7 APPPATH\Controllers\Admin.php(27): view('admin/product')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->product()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 06:50:18 --> Invalid file: admin/sidebar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sidebar.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/sidebar', [], true)
+ 3 APPPATH\Views\admin\product.php(30): view('admin/sidebar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\product.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/product', [], true)
+ 7 APPPATH\Controllers\Admin.php(27): view('admin/product')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->product()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 06:50:59 --> Invalid file: admin/sidebar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sidebar.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/sidebar', [], true)
+ 3 APPPATH\Views\admin\product.php(30): view('admin/sidebar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\product.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/product', [], true)
+ 7 APPPATH\Controllers\Admin.php(27): view('admin/product')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin->product()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 08:24:34 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Common.php on line 721.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

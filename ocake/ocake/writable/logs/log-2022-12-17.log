@@ -1,0 +1,120 @@
+ERROR - 2022-12-17 05:27:35 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:33:39 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:34:36 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:35:46 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:37:42 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:39:46 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:40:57 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2022-12-17 05:42:46 --> mysqli_sql_exception: Duplicate entry '0' for key 'product.PRIMARY' in C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\ocake\ocake\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\ocake\ocake\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\ocake\ocake\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\ocake\ocake\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\ocake\ocake\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\ocake\ocake\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\ocake\ocake\app\Controllers\Product.php(56): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Product->add_product()
+#9 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\wamp64\www\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}

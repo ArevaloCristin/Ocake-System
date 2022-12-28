@@ -1,0 +1,16 @@
+CRITICAL - 2022-11-20 23:34:13 --> Undefined array key "email"
+in APPPATH\Controllers\Personal.php on line 24.
+ 1 APPPATH\Controllers\Personal.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Controllers\\Personal.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 23:35:08 --> Undefined array key "email"
+in APPPATH\Controllers\Personal.php on line 24.
+ 1 APPPATH\Controllers\Personal.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'APPPATH\\Controllers\\Personal.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->login()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

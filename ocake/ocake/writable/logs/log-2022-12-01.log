@@ -1,0 +1,71 @@
+CRITICAL - 2022-12-01 04:25:13 --> unlink(C:\xampp\htdocs\ocake\ocake\writable\debugbar/debugbar_1669863085.496416.json): Permission denied
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\ocake\\ocake\\writable\\debugbar/debugbar_1669863085.496416.json): Permission denied', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('FCPATH\\ocake\\writable\\debugbar/debugbar_1669863085.496416.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(500): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1669890311.836225', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(477): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(328): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 05:39:37 --> syntax error, unexpected ']'
+in APPPATH\Controllers\Product.php on line 59.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Product.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Product')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Product')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Product')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Product', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 05:40:48 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(39): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 05:42:59 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(39): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 05:43:08 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(39): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 05:46:08 --> The uploaded file has already been moved.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 133.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(133): CodeIgniter\HTTP\Exceptions\HTTPException::forAlreadyMoved()
+ 2 APPPATH\Controllers\Product.php(59): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 06:13:08 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Product.php(39): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->add_product()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-01 06:26:48 --> Undefined property: stdClass::$Upload_Photo
+in APPPATH\Views\category.php on line 91.
+ 1 APPPATH\Views\category.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$Upload_Photo', 'APPPATH\\Views\\category.php', 91, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('category', [], true)
+ 5 APPPATH\Controllers\Product.php(117): view('category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Product->getHalloween()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

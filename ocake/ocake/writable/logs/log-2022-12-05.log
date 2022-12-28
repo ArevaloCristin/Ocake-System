@@ -1,0 +1,143 @@
+ERROR - 2022-12-05 05:05:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ocake', 3306, '', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin2...', '123')
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Personal->login()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin2...', '123')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Personal->login()
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-05 05:05:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin20@gmail.com', '123')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-05 05:07:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ocake', 3306, '', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin2...', '123')
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Personal->login()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin2...', '123')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Personal->login()
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-05 05:07:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin20@gmail.com', '123')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-05 05:53:20 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ocake', 3306, '', 0)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin2...', '123')
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Personal->login()
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+#10 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ocake\ocake\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ocake\ocake\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ocake\ocake\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ocake\ocake\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ocake\ocake\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ocake\ocake\app\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin2...', '123')
+#7 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(927): App\Controllers\Personal->login()
+#8 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+#9 C:\xampp\htdocs\ocake\ocake\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ocake\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-12-05 05:53:20 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Personal.php(37): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Personal.php(24): App\Controllers\Personal->exists('arevalocristin20@gmail.com', '123')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Personal->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personal))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-05 13:17:24 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(224): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(182): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
