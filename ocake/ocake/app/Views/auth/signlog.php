@@ -10,19 +10,30 @@
 <body>
 
     <div class="container" id="container">
+    
         <div class="form-container sign-up-container">
-
             <?= isset($msg)? $msg:''?>
             <form method="post" action="<?=site_url('save') ?>">
                 <h1>Create Account</h1>
-                <div class="social-container">
+                <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="social"><i class="fa fa-google"></i></a>
                     <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
                 </div>
-                <span>or use your email for registration</span>
+                <span>or use your email for registration</span> -->
                 <input type="text" id="firstname" name="firstname" placeholder="firstname">
                 <input type="text" id="lastname" name="lastname" placeholder="lastname">
+                <!-- <input type="text" id="mobile" name="mobile" placeholder="mobile"> -->
+                <select type="text" id="municipality" name="municipality" placeholder="municipality">
+                    <option value="" disabled selected>municipality</option>
+                    <option>Naujan</option>
+                </select>
+                <select type="text" id="barangay" name="barangay" placeholder="barangay">
+                        <option value="" disabled selected>barangay</option>
+                    <?php foreach($address as $data){?>
+                        <option><?php echo $data->barangay;?></option>
+                    <?php }?>
+                </select>
                 <input type="email" id="email" name="email" placeholder="Email">
                 <input type="password" id="password" name="password" placeholder="Password">
                 <button type="submit">Register</button>
@@ -63,16 +74,16 @@
     </div>
 
     <script type="text/javascript">
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('container');
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
 
-    signUpButton.addEventListener('click', () => {
-        container.classList.add("right-panel-active");
-    });
-    signInButton.addEventListener('click', () => {
-        container.classList.remove("right-panel-active");
-    });
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
     </script>
 
 
