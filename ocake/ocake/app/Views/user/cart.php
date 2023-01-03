@@ -21,15 +21,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <div class="shopping-cart section">
+<form method="get" action= "<?=site_url('checkout')?>" > 
     <div class="container">
         <div class="cart-list-head">
 
             <div class="cart-list-title">
                 <div class="row">
-                    <div class="col-lg-1 col-md-1 col-12">
+                    <div class="col-lg-1 col-md-2 col-12">
+                        <input type="checkbox" name="" value="">
                     </div>
-                    <div class="col-lg-4 col-md-3 col-12">
-                        <p>Product Name</p>
+                    <div class="col-lg-2 col-md-1 col-12">
+                        <p>Product</p>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-12">
+                        <p>Name</p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-12">
                         <p>Price</p>
@@ -47,20 +52,20 @@
             </div>
             
              
-            <?php 
-                foreach ($cartData as $data) {
-
-            ?>
+            <?php foreach ($cartData as $data) {?>
                 <div class="cart-single-list">
                     <div class="row align-items-center">
-                        <div class="col-lg-1 col-md-1 col-12">
+                        <div class="col-lg-1 col-md-2 col-12">
+                            <input type="checkbox" name="cart_product[]" value="<?php echo $data->cart_id?>">
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-12">
                             <div class="product-image ">
                                 <a href="<?= site_url('productdetail') ?>">
-                                    <img src="http://localhost/ocake/uploads/<?php echo $data->image; ?>" width="300px" alt="<?php echo $data->flavor; ?>">
+                                    <img src="http://localhost/ocake/uploads/<?php echo $data->image; ?>" width="100px" alt="<?php echo $data->flavor; ?>">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-3 col-12">
+                        <div class="col-lg-2 col-md-2 col-12">
                             <h5 class="product-name">
                                 <a href="<?= site_url('productgrid') ?>"><?php echo $data->flavor; ?></a>
                             </h5>
@@ -92,8 +97,7 @@
                 </div>
             <?php } ?>
 
-                  
-
+            
         </div>
         <div class="row">
             <div class="col-12">
@@ -116,12 +120,9 @@
                             <div class="right">
                                 <ul>
                                     <li>Cart Subtotal<span><?php echo $subtotal; ?></span></li>
-                                    <li>Shipping<span>Free</span></li>
-                                    <li>You Save<span>$29.00</span></li>
-                                    <li class="last">You Pay<span><?php echo $subtotal - 29.00?></span></li>
                                 </ul>
                                 <div class="button">
-                                    <a href="<?=site_url('checkout')?>" class="btn">Checkout</a>
+                                    <input type="submit" class="btn" value="Checkout" >
                                     <a href="<?=site_url('productgrid')?>" class="btn btn-alt">Continue shopping</a>
                                 </div>
                             </div>
@@ -132,43 +133,8 @@
             </div>
         </div>
     </div>
+</form>
 </div>
-
-
-<footer class="footer">
-
-    <div class="footer-top">
-        <div class="container">
-            <div class="inner-content">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-12">
-                        <div class="footer-logo">
-                            <a href="index.html">
-                                <img src="assets/images/logo/white-logo.svg" alt="#">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-md-8 col-12">
-                        <div class="footer-newsletter">
-                            <h4 class="title">
-                                Subscribe to our Newsletter
-                                <span>Get all the latest information, Sales and Offers.</span>
-                            </h4>
-                            <div class="newsletter-form-head">
-                                <form action="#" method="get" target="_blank" class="newsletter-form">
-                                    <input name="EMAIL" placeholder="Email address here..." type="email">
-                                    <div class="button">
-                                        <button class="btn">Subscribe<span class="dir-part"></span></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 <a href="#" class="scroll-top">
     <i class="lni lni-chevron-up"></i>
