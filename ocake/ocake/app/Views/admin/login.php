@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="">
 
     <div class="container">
 
@@ -35,16 +35,17 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-color:#d10f94">
+                                <img style="height:410px; width:450px" src="http://localhost/ocake/uploads/admin1.gif/">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back Admin!</h1>
                                     </div>
 
                                     <?= isset($msg)? $msg:''?>
                                     <form method="post" action="<?=site_url('login_account') ?>">
-
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" id="email"
                                                 name="email" aria-describedby="email"
@@ -65,20 +66,20 @@
                                             Login
                                         </button>
                                         <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
                                         </a>
                                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                             <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
+                                        </a> -->
                                     </form>
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="<?=site_url('forgotpassword')?>">Forgot Password?</a>
                                     </div>
-                                    <div class="text-center">
+                                    <!-- <div class="text-center">
                                         <a class="small" href="<?=site_url('admin-signup')?>">Create an Account!</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
