@@ -1,4 +1,4 @@
- <!-- End Header Area -->
+<!-- End Header Area -->
 
     <div class="breadcrumbs">
         <div class="container">
@@ -219,7 +219,7 @@
                                                     alt="#">
                                                 <div class="button">
                                                     <form action="<?=site_url('add_cart')?>" method="POST">
-                                                    <input type="hidden" name="uid" value="<?=session('id')?>">
+                                                    <!-- <input type="hidden" name="uid" value=""> -->
                                                         <input type="hidden" name="occasion"
                                                             value="<?=$data->occasion;?>">
                                                         <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
@@ -232,6 +232,9 @@
                                                 </div>
                                             </div>
                                             <div class="product-info">
+                                                <a class="btn btn-outline-primary btn-rounded btn-sm" style="float:right" 
+                                                    href="<?=site_url('productdetails')?>">View Details
+                                                </a>
                                                 <span class="category"> <?php echo $data->flavor; ?></span>
                                                 <h4 class="title">
                                                     <a href="product-grids.html"><?php echo $data->occasion; ?> Cake</a>
@@ -244,6 +247,7 @@
                                                     <li><i class="lni lni-star"></i></li>
                                                     <li><span>4.0 Review(s)</span></li>
                                                 </ul>
+                                                
                                                 <div class="price">
                                                     <span>&#8369 <?php echo $data->price; ?></span>
                                                 </div>
