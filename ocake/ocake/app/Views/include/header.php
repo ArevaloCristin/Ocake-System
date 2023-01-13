@@ -15,11 +15,6 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- <link rel="stylesheet" href="assets/css/customization.css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/Draggable.min.css">
-
 </head>
 
 <body>
@@ -83,7 +78,10 @@
                         <div class="top-end">
                             <div class="user">
                                 <i class="lni lni-user"></i>
-                                <?=session('email')?>
+                                <?php 
+                                    if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user")
+                                        echo ucwords($_SESSION['userF_name']); // set first letter to upperCase
+                                ?>
                             </div>
                             <ul class="user-login">
                                 <!-- <li>
@@ -151,18 +149,28 @@
                                 <div class="wishlist">
                                     <a href="javascript:void(0)">
                                         <i class="lni lni-heart"></i>
-                                        <!-- <span class="total-items">0</span> -->
+                                        <span class="total-items">0</span>
                                     </a>
                                 </div>
                                 <div class="cart-items">
+                               
                                     <a href="javascript:void(0)" class="main-btn">
                                         <i class="lni lni-cart"></i>
-                                        <!-- <span class="total-items">1</span> -->
+                                        <span class="total-items"><?php echo $cart_count; ?></span>
                                     </a>
+                                   
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
-                                            <!-- <span>2 Items</span> -->
+                                            
+                                            <span><?php echo $cart_count;?> 
+                                            <?php if ($cart_count > 1){
+                                                echo "Items";
+                                            }else{
+                                                echo "Item";
+                                            }?>
+                                            </span>
+                                            
                                             <a href="<?=site_url('cart')?>">View Cart</a>
                                         </div>
                                         <ul class=" shopping-list">
@@ -170,22 +178,22 @@
                                             <?php  foreach($cartData as $data){ 
                                                 $total += $data->price * $data->quantity
                                                 ?>
-                                            <li>
-                                                <a href="<?php echo site_url('cart/delete_cart/'.$data->cart_id); ?>" class="remove" title="Remove this item"><i
-                                                        class="lni lni-close"></i></a>
-                                                <div class="cart-img-head">
-                                                    <a class="cart-img" href="<?=site_url('productgrid')?>"><img
-                                                            src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="#"></a>
-                                                </div>
+                                                <li>
+                                                    <a href="<?php echo site_url('cart/delete_cart/'.$data->cart_id); ?>" class="remove" title="Remove this item"><i
+                                                            class="lni lni-close"></i></a>
+                                                    <div class="cart-img-head">
+                                                        <a class="cart-img" href="<?=site_url('productgrid')?>"><img
+                                                                src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="#"></a>
+                                                    </div>
 
-                                                <div class="content">
-                                                    <h4><a href="<?=site_url('productgrid')?>">
-                                                            <?=$data->flavor; ?></a>
-                                                        </h4>
-                                                        <p><?=$data->occasion; ?></p>
-                                                    <p class="quantity">x<?=$data->quantity; ?> - <span class="amount"><?='&#8369;'.$data->price; ?></span></p>
-                                                </div>
-                                            </li>
+                                                    <div class="content">
+                                                        <h4><a href="<?=site_url('productgrid')?>">
+                                                                <?=$data->flavor; ?></a>
+                                                            </h4>
+                                                            <p><?=$data->occasion; ?></p>
+                                                        <p class="quantity">x<?=$data->quantity; ?> - <span class="amount"><?='&#8369;'.$data->price; ?></span></p>
+                                                    </div>
+                                                </li>
                                             <?php }?>
                                             
                                         </ul>
@@ -242,6 +250,14 @@
                                 <li><a href="<?=site_url('popular')?>">Popular Cakes</a></li>
                                 <li><a href="<?=site_url('newarrival')?>">New Arrival</a></li>
                                 <li><a href="<?=site_url('miscellaneous')?>">Miscellaneous</a></li>
+                                <!-- <li><a href="product-grids.html">top 100 offer</a></li>
+                            <li><a href="product-grids.html">sunglass</a></li>
+                            <li><a href="product-grids.html">watch</a></li>
+                            <li><a href="product-grids.html">man’s product</a></li>
+                            <li><a href="product-grids.html">Home Audio & Theater</a></li>
+                            <li><a href="product-grids.html">Computers & Tablets </a></li>
+                            <li><a href="product-grids.html">Video Games </a></li>
+                            <li><a href="product-grids.html">Home Appliances </a></li>-->
                             </ul>
                         </div>
                         <!-- End Mega Category Menu -->
@@ -290,7 +306,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a href="<?=site_url('orderdetails')?>">Orders</a></li>
+                                    <li class="nav-item"><a href="<?=site_url('orders')?>">Orders</a></li>
                                     </li>
                                     <li class="nav-item">
                                     <!-- <li class=" nav-item">
