@@ -20,8 +20,8 @@
 
 <section class="checkout-wrapper section">
     <div class="container">
-        <div class="row justify-content-center">
-            <form action="<?=site_url('placeorder')?>" method="POST"  style="background-color:none" >
+        <form action="<?=site_url('placeorder')?>" method="POST"  style="background-color:none" >
+            <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="checkout-steps-form-style-1">
                         <ul id="accordionExample">
@@ -59,7 +59,8 @@
                                             <div class="single-form form-default">
                                                 <label>Phone Number</label>
                                                 <div class="form-input form">
-                                                    <input type="text" placeholder="Phone Number" name="mobile">
+                                                    <input type="text" placeholder="Phone Number" name="mobile"
+                                                    <?php foreach($userData as $data){?> value="<?php echo $data->mobile;?>"<?php }?>>
                                                 </div>
                                             </div>
                                         </div>
@@ -67,7 +68,7 @@
                                             <div class="single-form form-default">
                                                 <label>Municipality</label>
                                                 <div class="form-input form">
-                                                    <input type="text" placeholder="Email Address" name="email" value="<?php echo "Naujan";?>">
+                                                    <input type="text" placeholder="Municipality" name="municipality" value="Naujan">
                                                 </div>
                                             </div>
                                         </div>
@@ -128,6 +129,7 @@
                                             </div>
                                         </div>
                                         <input type="hidden" value="<?php echo ($Total);?> " name="total_price">
+                                        <input type="hidden" value="<?php echo $cart_count;?> " name="count">
                                         <!-- <div class="col-md-12">
                                             <div class="single-checkbox checkbox-style-3">
                                                 <input type="checkbox" id="checkbox-3">
@@ -407,7 +409,7 @@
                         </div> -->
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </section>
