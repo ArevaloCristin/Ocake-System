@@ -25,7 +25,6 @@
 
 
 </head>
-
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -62,151 +61,127 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead class="text-center">
                                         <tr>
+                                            <th>#</th>
                                             <th>Order ID</th>
-                                            <th>image</th>
+                                            <!-- <th>image</th> -->
                                             <th>Order by</th>
                                             <th>Items</th>
                                             <th>Price</th>
                                             <th>Status</th>
                                             <th>View</th>
-                                            <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tfoot class="text-center">
                                         <tr>
-                                            <th >Order ID</th>
-                                            <th>image</th>
+                                            <th>#</th>
+                                            <th >Order Code</th>
+                                            <!-- <th>image</th> -->
                                             <th>Order by</th>
                                             <th>Items</th>
                                             <th>Price</th>
                                             <th>Status</th>
                                             <th>View</th>
-                                            <th>Delete</th>
                                         </tr>
                                     </tfoot>
                                     
                                     <tbody>
 
-                                    <?php foreach($order as $data){?>
+                                    <?php $num = 1; foreach($order as $data){?>
                                         <tr>
-                                            <td class="text-center"><?=$data->order_id?></td>
-                                            <td class="text-center"><img style="height:30px" src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="" srcset=""></td>
-                                            <td class="text-center">Jechel Ramirez</td>
-                                            <td class="text-center"><?=$data->quantity;?></td>
-                                            <td class="text-center"><?=$data->price;?></td>
+                                            <td class="text-center"> <?php echo $num++; ?></td>
+                                            <td class="text-center"><?=$data->order_code?></td>
+                                            <td class="text-center"><?=$data->firstname?> <?=$data->lastname?></td>
+                                            <td class="text-center"><?=$data->items;?>
+                                                <?php if ($cart_count > 1){
+                                                   echo "Items";
+                                                }else{
+                                                    echo "Item";
+                                                }?>
+                                            </td>
+                                            <!-- <td class="text-center"><img style="height:30px" src="http://localhost/ocake/uploads/<?//php echo $data->image;?>" alt="" srcset=""></td> -->
+                                            <!-- <td class="text-center"><?//=$data->quantity;?></td> -->
+                                            <td class="text-center"><?=$data->total_price;?></td>
                                             <td class="text-center"><?=$data->stat;?></td>
                                             <td>
-                                                <!-- <a style="color:#3388FF; margin-right:5px" class="text-center"
-                                                href="<?php //echo site_url('cart/delete_cart/' . $data->cart_id); ?>">
-                                                <i class='fas fa-eye'></i>
-                                                </a> -->
                                                 <div style="text-align:center">
                                                 <button class="center" type="button" style="justify-content:center; color:#3388FF; border:none; background:none;"
-                                                    data-toggle="modal" data-target="#myModal<?php echo $data->order_id;?>">
+                                                    data-toggle="modal" data-target="#myModal<?php echo $data->checkout_id;?>">
                                                     <i class='fas fa-eye'></i>
                                                 </button>
                                                 </div>
-                                                    <div class="modal fade" id="myModal<?php echo $data->order_id;?>"
+                                                <?php foreach($details as $data){?>
+                                                    <div class="modal fade" id="myModal<?php echo $data->checkout_id;?>"
                                                         role="dialog">
                                                         <div class="modal-dialog" >
-                                                            <!-- Modal content-->
+                                                                <!-- Modal content-->
                                                             <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title">Order Details</h4>
-                                                                    <button type="button" class="close"
-                                                                        data-dismiss="modal">&times;</button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <form class="mt-2"
-                                                                        action="<?php echo site_url('order/update_order/'.$data->order_id); ?>"
-                                                                        method="post" accept-charset="utf-8"
-                                                                        enctype="multipart/form-data">
-                                                                        <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
-                                                                        <div class="mb-3">
-                                                                            <label for="Order ID">Order ID: <?php echo $data->order_id?></label><br>
-                                                                            <label for="Name">Customer Name: Jechel Ramirez</label><br>
-                                                                            <label for="Address">Address: </label><br>
-                                                                            <label for="Phone Number">Phone Number: </label><br>
-                                                                            <label for="Purchased Items">Purchased Items: <?php echo $data->quantity?></label><br>
-                                                                            <label for="Total Price">Total Price: <?php echo $data->price?></label><br>
-                                                                            <label for="Payment Method">Payment Method: <?php //echo $data->price?></label><br>
-                                                                            <label for="Delivery Method">Delivery Method: <?php //echo $data->price?></label><br>
-                                                                            <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php //echo $data->price?></label><br>
-
-                                                                            <label for="stat">Status:</label><br>
-                                                                            <select name="stat" class="form-control"
-                                                                                id="stat">
-                                                                                <option
-                                                                                    <?php if($data->stat == "Pending"){ echo "selected"; }?>
-                                                                                    value="Pending">Pending</option>
-                                                                                <option
-                                                                                    <?php if($data->status == "Confirm"){ echo "selected"; }?>
-                                                                                    value="Confirm">Confirm</option>
-                                                                                <option
-                                                                                    <?php if($data->status == "Processing"){ echo "selected"; }?>
-                                                                                    value="Processing">Processing</option>
-                                                                                <option
-                                                                                    <?php if($data->status == "Shipped"){ echo "selected"; }?>
-                                                                                    value="Shipped">Shipped</option>
-                                                                                <option
-                                                                                    <?php if($data->status == "Completed"){ echo "selected"; }?>
-                                                                                    value="Completed">Completed</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <!-- </select>
-                                                                        <input type="hidden" name="prod_id"
-                                                                            value="<?php //echo $data->id?>"><br>
-                                                                        <label for="Flavor">Flavor:</label><br>
-                                                                        <input type="text" class="form-control" id="flavor"
-                                                                            name="flavor"
-                                                                            value="<?php //echo $data->flavor?>"><br>
-
-                                                                        <label for="Price">Price:</label><br>
-                                                                        <input type="text" class="form-control " id="price"
-                                                                            name="price"
-                                                                            value="<?php //echo $data->price?>"><br>
-
-                                                                        <div class="mt-3">
-                                                                            <div id="alertMessage"
-                                                                                class="alert alert-warning mb-3"
-                                                                                style="display: none">
-                                                                                <span id="alertMsg"></span>
-                                                                            </div>
-                                                                            <div class="d-grid text-center">
-                                                                                <img class="mb-3" id="ajaxImgUpload"
-                                                                                    alt="Preview Image"
-                                                                                    src="http://localhost/ocake/uploads/<?php //echo $data->image;?>"
-                                                                                    height='50%' width='50%' />
-                                                                            </div>
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Order Details</h4>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal">&times;</button>
+                                                                    </div>
+                                                                
+                                                                    <div class="modal-body">
+                                                                        <form class="mt-2"
+                                                                            action="<?php echo site_url('order/update_order/'.$data->checkout_id); ?>"
+                                                                            method="post" accept-charset="utf-8"
+                                                                            enctype="multipart/form-data">
+                                                                            <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
+                                                                            
                                                                             <div class="mb-3">
-                                                                                <input type="file" name="image"
-                                                                                    multiple="true" id="finput"
-                                                                                    onchange="onFileUpload(this);"
-                                                                                    class="form-control " accept="image/*">
+                                                                                <label for="Order ID">Order ID: <?php echo $data->checkout_id?></label><br>
+                                                                                <label for="Name">Customer Name: <?php echo $data->firstname?> <?php echo $data->lastname?>  </label><br>
+                                                                                <label for="Address">Address: <?php echo $data->mobile?></label><br>
+                                                                                <label for="Phone Number">Phone Number: </label><br>
+                                                                                <label for="Purchased Items">Purchased Items: <?php echo $data->quantity?></label><br>
+                                                                                <label for="Total Price">Total Price: <?php echo $data->total_price?></label><br>
+                                                                                <label for="Payment Method">Payment Method: <?php echo $data->payment_method?></label><br>
+                                                                                <label for="Delivery Method">Delivery Method: <?php echo $data->delivery_method?></label><br>
+                                                                                <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php echo $data->date?></label><br>
+                                                                                <label for="Scheduled Delivery Date">Order Status: <?php echo $data->stat?></label><br>
+                                                                                <label for="stat">Status:</label><br>
+                                                                                <select name="stat" class="form-control"
+                                                                                    id="stat">
+                                                                                    <option
+                                                                                        <?php if($data->stat == "Pending"){ echo "selected"; }?>
+                                                                                        value="Pending">Pending</option>
+                                                                                    <option
+                                                                                        <?php if($data->stat == "Confirmed"){ echo "selected"; }?>
+                                                                                        value="Confirmed">Confirmed</option>
+                                                                                    <option
+                                                                                        <?php if($data->stat == "Processing"){ echo "selected"; }?>
+                                                                                        value="Processing">Processing</option>
+                                                                                    <option
+                                                                                        <?php if($data->stat == "Shipped"){ echo "selected"; }?>
+                                                                                        value="Shipped">Shipped</option>
+                                                                                    <option
+                                                                                        <?php if($data->stat == "Delivered"){ echo "selected"; }?>
+                                                                                        value="Delivered">Delivered</option>
+                                                                                    <option hidden
+                                                                                        <?php if($data->stat == "Completed"){ echo "selected"; }?>
+                                                                                        value="Completed">Completed</option>
+                                                                                    
+                                                                                    <option hidden
+                                                                                        <?php if($data->stat == "Cancelled"){ echo "selected"; }?>
+                                                                                        value="Cancelled">Cancelled</option>
+                                                                                </select>
                                                                             </div>
-                                                                        </div> -->
-
-                                                                        <input class="button btn btn-info btn-lg" style="float:right"
-                                                                            type="submit" value="Update" name="submit">
-                                                                    </form>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default"
-                                                                        data-dismiss="modal">Close</button>
-                                                                </div>
+                                                                            <input class="button btn btn-info btn-lg" style="float:right"
+                                                                                type="submit" value="Update" name="submit">
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default"
+                                                                            data-dismiss="modal">Close</button>
+                                                                    </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a style="color:red; margin-right:5px" class="text-center"
-                                                    href="<?php //echo site_url('cart/delete_cart/' . $data->cart_id); ?>">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                 </td>
+                                                <?php }?> 
                                             </td>
+                                           
                                         </tr>
-                                        <?php }?>
+                                    <?php }?>
                                     </tbody>
                                 </table>
                             </div>
@@ -232,25 +207,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="<?=site_url('logout')?>">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php echo view('admin/include/logout-modal'); ?>
     <?php echo view('admin/include/photo-script'); ?>
     <?php echo view('admin/include/script'); ?>
 
