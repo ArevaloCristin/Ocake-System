@@ -9,7 +9,7 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="breadcrumb-nav">
                     <li><a href="<?=site_url('home')?>"><i class="lni lni-home"></i> Home</a></li>
-                    <li><a href="<?=site_url('productlist')?>">Shop</a></li>
+                    <!-- <li><a href="<?//=site_url('productlist')?>">Shop</a></li> -->
                     <li>Orders</li>
                 </ul>
             </div>
@@ -90,7 +90,11 @@
                                             <p><?php echo $data->stat; ?></p>
                                         </div>
                                         <div class="col-lg-3 col-md-2 col-12">
-                                            <a class="btn btn-primary" href="<?=site_url('orderdetails')?>" role="button">View Details</a>
+                                        <form action="<?=site_url('orderdetails')?>" method="POST">
+                                                        <input type="hidden" name="details" value="<?=$data->order_code;?>">
+                                                        <input type="submit" role="button" value="View" class="btn btn-primary">
+                                                    </form>
+                                           
                                         </div>
                                         <!-- <div class="col-lg-3 col-md-2 col-12">
                                             <a class="btn btn-primary" href="<?//php echo site_url('orderdetails/view/')/*.$data->order_code*/; ?>" role="button">View Details</a>
