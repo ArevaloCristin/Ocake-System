@@ -6,16 +6,12 @@ use App\Models\Cart_m;
 use App\Models\Personal_m;
 use App\Models\Biller_model;
 use App\Models\Address_model;
-use App\Models\Custom_model;
-use App\Models\Orders_model;
+use App\Models\Checkout_model;
 use App\Models\AddOns_model;
 use App\Models\Layer_model;
 use App\Models\Shape_model;
 use App\Models\Color_model;
 use App\Models\Flavor_model;
-use App\Models\CountryModel;
-use App\Models\StateModel;
-use App\Models\Cake_model;
 
 class User extends BaseController
 {
@@ -26,6 +22,13 @@ class User extends BaseController
         $model = new Cart_m();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+        
         return view('include/header', $data)
             . view('user/index')
             . view('include/footer', $data);
@@ -52,6 +55,12 @@ class User extends BaseController
         }
         $data['Total'] = $totalprice;
 
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
        // $name = $_GET['cart_product'];
 
         //foreach($name as $data){
@@ -69,54 +78,20 @@ class User extends BaseController
         }
     }
 
-    //----------------- UPDATE BILLER DATA --------------//                  December 27,2022
-    public function biller_update($id){
-        $val = $this->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'email' => 'required',
-            'mobile' => 'required',  
-            'municipality' => 'required',
-            'barangay' => 'required',
-            'street' => 'required',
-            'delivery_method' => 'required',
-            'date' => 'required',
-            'payment_method' => 'required',
-            'total_price' => 'required',       
-            ]);
-        
-        $model = new Biller_model();
-        
-        if (!$val) {
-            $data['validation']  = $this->validator;
-            echo view('cart', $data);
-        }else{
-            $data = array(
-                'firstname' => $this->request->getVar('firstname'),
-                'lastname' => $this->request->getVar('lastname'),
-                'email' => $this->request->getVar('email'),
-                'mobile' => $this->request->getVar('mobile'),
-                'municipality' => $this->request->getVar('municipality'),
-                'barangay' => $this->request->getVar('barangay'),
-                'street' => $this->request->getVar('street'),
-                'delivery_method' => $this->request->getVar('delivery_method'),
-                'date' => $this->request->getVar('date'),
-                'payment_method' => $this->request->getVar('payment_method'),
-                'total_price' => $this->request->getVar('total_price'),
-            );              
-        $model->order_update($data,$id);
-            return redirect()->to(base_url('cart')); 
-            //return redirect('cart');   
-        }  
-    }
-
     public function about(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
-        $data['productData'] = $model_product->fetchProduct();
+        $data['productData'] = $model_product->fetchProduct($id);
         $data['cartData'] = $model->getCartData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/about')
             . view('include/footer');
@@ -132,6 +107,13 @@ class User extends BaseController
         $model = new Cart_m();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+        
         return view('include/header', $data)
             . view('user/contact')
             . view('include/footer');
@@ -139,23 +121,35 @@ class User extends BaseController
             return $this->response->redirect(site_url('signin'));
         }
     }
-
-
+    
     public function popular(){
+        if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
+        $id = $_SESSION['user_id'];
+        $model_cart = new Cart_m();
         $model = new Product_model();
         $occasion = "Birthday";
         // $data['cartData']= $model->getCartData();
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         // return view('include/header', $data)
         echo view('user/popular', $data)
             . view('include/footer');
+        }else{
+            return $this->response->redirect(site_url('signin'));
+        }
     }
    
     public function userforgotpassword() {
         return view('auth/userforgotpassword');
     }
-    //------------------ FETCH CART DATA ----------------//                // December 13,2022
+    //------------------ FETCH CART DATA ----------------//                 December 13,2022 
     public function cart(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
         $id = $_SESSION['user_id'];
@@ -163,15 +157,20 @@ class User extends BaseController
         $model = new Cart_m();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
+       
         $total = $model->getCartData($id);
         $totalprice = 0;
         foreach ($total as $price) {
             $totalprice = $totalprice + $price->price;
-
         }
-
         $data['subtotal'] = $totalprice;
 
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+        
         return view('include/header', $data)
             . view('user/cart')
             . view('include/footer');
@@ -179,7 +178,7 @@ class User extends BaseController
             return $this->response->redirect(site_url('signin'));
         }
     }
-    //------------- FETCH ORDER DETAILS DATA ------------//                 // December 20,2022
+    //------------- FETCH ORDER DETAILS DATA ------------//                 December 20,2022 --> January 03,2023
     public function orderdetails(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
         $id = $_SESSION['user_id'];
@@ -194,8 +193,17 @@ class User extends BaseController
         }
         $data['subtotal'] = $totalprice;
 
-        $model_order = new Orders_model();
-        $data['order']= $model_order->fetchProduct();
+        $model_order = new Checkout_model();
+        $order_code = $this->request->getVar('details');
+        $data['order']= $model_order->fetchCheckoutData($id,$order_code);
+        $data['status']= $model_order->getCheckout($id, $order_code);
+        $data['stat']= $model_order->get($id, $order_code);
+        
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
         
         return view('include/header', $data)
             . view('user/order_details')
@@ -205,13 +213,13 @@ class User extends BaseController
         }
     }
 
-    //--------------- UPDATE RECEIVED ORDER -------------//                // December 21,2022
+    //--------------- UPDATE RECEIVED ORDER -------------//                 December 21,2022 --> January 03,2023
     public function order_received($id){
         $val = $this->validate([
             'received_status' => 'required',         
             ]);
         
-        $model = new Orders_model();
+        $model = new Checkout_model();
         
         if (!$val) {
             $data['validation']  = $this->validator;
@@ -220,18 +228,18 @@ class User extends BaseController
             $data = array(
                 'stat' => $this->request->getVar('received_status'),
             );              
-        $model->order_update($data,$id);
+        $model->checkout_update($data,$id);
             return redirect()->to(base_url('orderdetails'));   
         }  
     }
     
-    //---------------- UPDATE CANCEL ORDER --------------//                // December 21,2022
+    //---------------- UPDATE CANCEL ORDER --------------//                 December 21,2022 --> January 03,2023
     public function cancel_order($id){
         $val = $this->validate([
         'cancel_status' => 'required',         
         ]);
     
-        $model = new Orders_model();
+        $model = new Checkout_model();
     
         if (!$val) {
             $data['validation']  = $this->validator;
@@ -240,9 +248,41 @@ class User extends BaseController
             $data = array(
                 'stat' => $this->request->getVar('cancel_status'),
              );              
-        $model->order_update($data,$id);
+        $model->checkout_update($data,$id);
         return redirect()->to(base_url('orderdetails'));   
         }  
+    }
+
+     //------------- FETCH ORDER DETAILS DATA ------------//                 January 04,2023
+     public function userOrders(){
+        if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
+        $id = $_SESSION['user_id'];
+        $model_product = new Product_model();
+        $model = new Cart_m();
+        $data['productData'] = $model_product->fetchProduct();
+        $data['cartData'] = $model->getCartData($id);
+        $total = $model->getCartData($id);
+        $totalprice = 0;
+        foreach ($total as $price) {
+            $totalprice = $totalprice + $price->price;
+        }
+        $data['subtotal'] = $totalprice;
+
+        $model_order = new Checkout_model();
+        $data['status']= $model_order->getData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+        
+        return view('include/header', $data)
+            . view('user/user_orders')
+            . view('include/footer');
+        }else{
+            return $this->response->redirect(site_url('signin'));
+        }
     }
 
     public function productlist(){
@@ -252,6 +292,13 @@ class User extends BaseController
         $model = new Cart_m();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/productlist')
             . view('include/footer');
@@ -267,6 +314,13 @@ class User extends BaseController
         $model = new Cart_m();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/faq')
             . view('include/footer');
@@ -282,6 +336,13 @@ class User extends BaseController
         $model = new Cart_m();
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/productgrid')
             . view('include/footer');
@@ -289,8 +350,7 @@ class User extends BaseController
             return $this->response->redirect(site_url('signin'));
         }
     }
-    public function modal()
-    {
+    public function modal(){
         return view('admin/modal');
     }
     public function getBDay(){
@@ -302,6 +362,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -319,6 +386,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -336,6 +410,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -353,6 +434,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -370,6 +458,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -387,6 +482,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -404,6 +506,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -421,6 +530,13 @@ class User extends BaseController
         $data['cartData'] = $model_cart->getCartData($id);
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
             . view('user/birthday')
             . view('include/footer');
@@ -434,40 +550,51 @@ class User extends BaseController
         $id = $_SESSION['user_id'];
         $model_product = new Product_model();
         $model = new Cart_m();
+        
         $data['productData'] = $model_product->fetchProduct();
         $data['cartData'] = $model->getCartData($id);
-        return view('include/header', $data)
-            . view('user/productdetails')
-            . view('include/footer');
+
+        $prod_id = $this->request->getVar('prod_id');
+        $data['product'] = $model_product->getDetails($prod_id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+            return view('include/header', $data)
+                 . view('user/productdetails')
+                 . view('include/footer');
         }else{
             return $this->response->redirect(site_url('signin'));
         }
     
     }
 
-     //---------------- FETCH CUSTOMIZATION DATA --------------//                // December 25,2022
+      //---------------- FETCH CUSTOMIZATION DATA --------------//                // December 25,2022
     public function customization(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
         $id = $_SESSION['user_id'];
         $model = new Product_model();
         $model_cart = new Cart_m();
         $model_addons = new AddOns_model();
-        $model_layer = new Layer_model();
-        $model_shape = new Shape_model();
-        $model_color = new Color_model();
         $model_flavor = new Flavor_model();
         $occasion = "customization";
         $data['cartData'] = $model_cart->getCartData($id);
         $datum['custom_addons']= $model_addons->fetchAddOns();
-        $datum['custom_layer']= $model_layer->fetchLayer();
-        $datum['custom_shape']= $model_shape->fetchShape();
-        $datum['custom_color']= $model_color->fetchColor();
         $datum['custom_flavor']= $model_flavor->fetchFlavor();
         $datum['user_id'] = $id;
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
-            . view('user/customization2', $datum)
+            . view('user/customization', $datum)
             . view('include/footer');
         }else{
             return $this->response->redirect(site_url('signin'));
@@ -475,7 +602,7 @@ class User extends BaseController
       
     }
 
-    //---------------- SAVE CUSTOMIZATION DATA --------------//                // January 6,2023
+    //----------------- SAVE CUSTOMIZATION DATA ----------------//                // January 6,2023
     public function saveFinalDesign(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
             $id = $_SESSION['user_id'];
@@ -507,15 +634,23 @@ class User extends BaseController
         $model_cart = new Cart_m();
         $occasion = "Customized";
         $data['cartData'] = $model_cart->getCartData($id);
-        $data['product'] = $model->getBDay($occasion); /*connect to model function */
+        $data['product'] = $model->getCustomized($occasion,$id); /*connect to model function */
         $data['occasion'] = $occasion;
+
+        #count cart items#
+        $cart = $model_cart->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
         return view('include/header', $data)
-            . view('user/birthday')
+            . view('user/customized_cake')
             . view('include/footer');
         }else{
             return $this->response->redirect(site_url('signin'));
         }
     }
+
 
 
 }
