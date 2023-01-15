@@ -1,4 +1,24 @@
-<!-- Start Breadcrumbs -->
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Ocake</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/white-logo.png" />
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <!-- Start Breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
             <div class="row align-items-center">
@@ -7,13 +27,16 @@
                         <h1 class="page-title">Product Details</h1>
                     </div>
                 </div>
+                
+                <?php foreach ($product as $data) {?>
                 <div class="col-lg-6 col-md-6 col-12">
                     <ul class="breadcrumb-nav">
                         <li><a href="<?=site_url('home')?>"><i class="lni lni-home"></i> Home</a></li>
-                        <li><a href="<?=site_url('shop')?>">Shop</a></li>
-                        <li>Single Product</li>
+                        <li><a href="<?=site_url(strtolower($data->occasion))?>"><?php echo $data->occasion;?> Category</a></li>
+                        <li>Product Details</li>
                     </ul>
                 </div>
+                <?php }?>
             </div>
         </div>
     </div>
@@ -23,13 +46,15 @@
     <section class="item-details section">
         <div class="container">
             <div class="top-area">
+            <?php $num = 1;    
+            foreach ($product as $data) { ?>
             <form action="<?=site_url('add_cart')?>" method="POST">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-images">
                             <main id="gallery">
                                 <div class="main-img">
-                                    <img src="assets/images/product-details/01.jpg" id="current" alt="#">
+                                <img src="http://localhost/ocake/uploads/<?php echo $data->image;?>" id="current" alt="#">
                                 </div>
                                 <!-- <div class="images">
                                     <img src="assets/images/product-details/01.jpg" class="img" alt="#">
@@ -43,13 +68,10 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="product-info">
-                            <h2 class="title">GoPro Karma Camera Drone</h2>
-                            <p class="category"><i class="lni lni-tag"></i> Drones:<a href="javascript:void(0)">Action
-                                    cameras</a></p>
-                            <h3 class="price">$850<span>$945</span></h3>
-                            <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
+                            <h2 class="title"><?php echo $data->occasion; ?> Cake</h2>
+                            <p class="category"><i class="lni lni-tag"></i> Flavor:<a href="javascript:void(0)"><?php echo $data->flavor; ?></a></p>
+                            <h3 class="price">&#8369 <?php echo $data->price; ?><span></span></h3>
+                            <p class="info-text"></p>
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="form-group quantity">
@@ -139,6 +161,7 @@
                     </div>
                 </div>
             </form>
+            <?php }?>
             </div>
             <div class="product-details-info">
                 <div class="single-block">
@@ -254,44 +277,7 @@
     </div>
     <!-- End Review Modal -->
 
-    <!-- Start Footer Area -->
-    <footer class="footer">
-        <!-- Start Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="inner-content">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-12">
-                            <div class="payment-gateway">
-                                <span>We Accept:</span>
-                                <img src="assets/images/footer/credit-cards-footer.png" alt="#">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-12">
-                            <div class="copyright">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                        target="_blank">GrayGrids</a></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-12">
-                            <ul class="socila">
-                                <li>
-                                    <span>Follow Us On:</span>
-                                </li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Footer Bottom -->
-    </footer>
-    <!--/ End Footer Area -->
-
+    
     <!-- ========================= scroll-top ========================= -->
     <a href="#" class="scroll-top">
         <i class="lni lni-chevron-up"></i>
@@ -320,6 +306,7 @@
             });
         });
     </script>
+    
 </body>
 
 </html>
