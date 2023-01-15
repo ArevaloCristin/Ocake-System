@@ -49,11 +49,11 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" id="email"
                                                 name="email" aria-describedby="email"
-                                                placeholder="Enter Email Address...">
+                                                placeholder="email" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="password"
-                                                name="password" placeholder="password">
+                                                name="password" placeholder="password" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
