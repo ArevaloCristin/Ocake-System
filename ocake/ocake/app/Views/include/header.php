@@ -182,8 +182,13 @@
                                                     <a href="<?php echo site_url('cart/delete_cart/'.$data->cart_id); ?>" class="remove" title="Remove this item"><i
                                                             class="lni lni-close"></i></a>
                                                     <div class="cart-img-head">
-                                                        <a class="cart-img" href="<?=site_url('productgrid')?>"><img
-                                                                src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="#"></a>
+                                                        <a class="cart-img" href="<?=site_url('productgrid')?>">
+                                                            <?php if($data->is_customized == 0) {?>
+                                                                <img src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                                                            <?php }else{?>
+                                                                <img src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                                                            <?php }?>
+                                                        </a>
                                                     </div>
 
                                                     <div class="content">
@@ -242,7 +247,6 @@
                                         <li><a href="<?=site_url('halloween')?>">Halloween</a></li>
                                         <li><a href="<?=site_url('christmas')?>">Christmas</a></li>
                                         <li><a href="<?=site_url('newyear')?>">New Year</a></li>
-
                                         <!--<li><a href="product-grids.html">Batteries</a></li>
                                     <li><a href="product-grids.html">Cables & Adapters</a></li>-->
                                     </ul>
@@ -275,9 +279,20 @@
                                     <li class="nav-item">
                                         <a href="<?=site_url('home')?>" class="active"
                                             aria-label="Toggle navigation">Home</a>
-                                    <li class="nav-item"><a href="<?=site_url('customization')?>">Customization</a></li>
+                                    </li>
+                                    <li class="nav-item"><a href="<?=site_url('orders')?>">Orders</a></li>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                                            data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
+                                            aria-expanded="false" aria-label="Toggle navigation">Customization</a>
+
+                                        <ul class="sub-menu collapse" id="submenu-1-2">
+                                            <li class="nav-item"><a href="<?=site_url('customization')?>">Start Design</a></li>
+                                            <li class="nav-item"><a href="<?=site_url('custom_design')?>">Your Designs</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Pages</a>
@@ -306,10 +321,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a href="<?=site_url('orders')?>">Orders</a></li>
-                                    </li>
-                                    <li class="nav-item">
-                                    <!-- <li class=" nav-item">
+                                    <li class=" nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Blog</a>
@@ -324,10 +336,10 @@
                                                     Single
                                                     Sibebar</a></li>
                                         </ul>
-                                    </li> -->
-                                    <!-- <li class="nav-item">
+                                    </li>
+                                    <li class="nav-item">
                                     <a href="contact.html" aria-label="Toggle navigation">Contact Us</a>
-                                </li>-->
+                                    </li> -->
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav>
