@@ -9,7 +9,7 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="breadcrumb-nav">
                     <li><a href="<?=site_url('home')?>"><i class="lni lni-home"></i> Home</a></li>
-                    <li><a href="<?=site_url('productlist')?>">Shop</a></li>
+                    <li><a href="<?=site_url('orders')?>">Orders</a></li>
                     <li>Order Details</li>
                 </ul>
             </div>
@@ -24,6 +24,7 @@
 
 <div class="shopping-cart section">
     <div class="container">
+   
         <div class="cart-list-head">
             <div class="cart-list-title">
                 <div class="row">
@@ -39,16 +40,16 @@
                         <div class="container padding-bottom-3x mb-1">
                             <div class="card mb-1">
                                 <div class="p-3 text-center text-white text-lg  rounded-top" style="background-color:#d10f94"><span class="text-uppercase">Tracking Order No - </span><span class="text-medium">
-                                    <?php foreach($status as $data){?>
+                                    <?php foreach($stat as $data){?>
                                         <?php echo $data->order_code;?>
                                     <?php }?></span>
                                 </div>
                                     <div class="d-flex flex-wrap flex-sm-nowrap justify-content-between py-2 px-2 bg-secondary">
-                                        <?php foreach($status as $data){?>
-                                            <div class="w-100 text-center py-1 px-2"><span class="text-medium">Shipped Via:</span> UPS Ground</div>
-                                            <div class="w-100 text-center py-1 px-2"><span class="text-medium">Status:</span><?php echo $data->stat;?></div>
-                                            <div class="w-100 text-center py-1 px-2"><span class="text-medium">Expected Date:</span><?php echo $data->date;?></div>
-                                        <?php }?>
+                                        <?php foreach($status as $datum){?>
+                                                <div class="w-100 text-center py-1 px-2"><span class="text-medium">Shipped Via:</span> UPS Ground</div>
+                                                <div class="w-100 text-center py-1 px-2"><span class="text-medium">Status:</span><?php echo $data->stat;?></div>
+                                                <div class="w-100 text-center py-1 px-2"><span class="text-medium">Expected Date:</span><?php echo $datum->date;?></div>
+                                        <?php }?>  
                                     </div>
                                     <div class="card-body">
                                         <div class="steps d-flex flex-wrap flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
@@ -58,7 +59,7 @@
                                                 </div>
                                                 <h4 class="step-title">Pending Order</h4>
                                             </div>
-                                                <?php foreach($status as $data){?>
+                                                <?php foreach($stat as $data){?>
                                                     <?php if($data->stat == "Confirmed" || $data->stat == "Processing" || $data->stat == "Shipped" || $data->stat == "Delivered" ){ 
                                                             echo
                                                                 '<div class="step completed">
@@ -157,13 +158,11 @@
                                 <div class="checkout-sidebar-price-table mt-10">
                                     <h5 class="title">Shipping Address</h5>
                                     <div >
-                                        <?//php foreach($order as $data){?>
                                         <div>
-                                            <label for="Name">Name: <?php echo $data->firstname;?> <?php echo $data->lastname;?></label><br>
-                                            <label for="Address">Addresss: <?php echo $data->street;?>, <?php echo $data->barangay;?>, <?php echo $data->municipality;?></label><br>
-                                            <label for="Phone Number"> Phone Number: <?php echo $data->mobile;?></label>
+                                            <label for="Name">Name: <?php echo $datum->firstname;?> <?php echo $datum->lastname;?></label><br>
+                                            <label for="Address">Addresss: <?php echo $datum->street;?>, <?php echo $datum->barangay;?>, <?php echo $datum->municipality;?></label><br>
+                                            <label for="Phone Number"> Phone Number: <?php echo $datum->mobile;?></label>
                                         </div>
-                                        <?//php }?>
                                     </div>
                                 </div>
                                 <div class="checkout-sidebar-price-table mt-10">
@@ -171,9 +170,9 @@
                                     <div >
                                         <?//php foreach($order as $data){?>
                                         <div>
-                                        <label for="Payment Method">Payment Method: <?php echo $data->payment_method?></label><br>
-                                        <label for="Delivery Method">Delivery Method: <?php echo $data->delivery_method?></label><br>
-                                        <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php echo $data->date?></label><br>
+                                        <label for="Payment Method">Payment Method: <?php echo $datum->payment_method?></label><br>
+                                        <label for="Delivery Method">Delivery Method: <?php echo $datum->delivery_method?></label><br>
+                                        <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php echo $datum->date?></label><br>
                                         </div>
                                         <?//php }?>
                                     </div>
@@ -335,8 +334,10 @@
                 </div>
             </div>
         </div>
+       
     </div>
 </div>
+
 
 <a href="#" class="scroll-top">
     <i class="lni lni-chevron-up"></i>
