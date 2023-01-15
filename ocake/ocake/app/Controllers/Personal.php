@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 use App\Models\Personal_m;
-use App\Models\Address_model;
 class Personal extends BaseController{
 
     public function index(){
@@ -14,9 +13,7 @@ class Personal extends BaseController{
     }
 
     public function signin(){
-        $model = new Address_model();
-        $data['address'] = $model->fetchAddress();
-        return view('auth/signlog', $data);
+       return view('auth/signlog');
     }
 
     public function save(){
@@ -43,10 +40,7 @@ class Personal extends BaseController{
             $session->user_id;            // way to get the declared session
             */
            return $this->response->redirect(site_url('home'));
-        //    var_dump($session->user_id);
         }else{
-            $model = new Address_model();
-            $data['address'] = $model->fetchAddress();
             $data['msg']='invalid';
             return view('auth/signlog', $data);    
         }
