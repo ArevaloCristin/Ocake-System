@@ -21,21 +21,21 @@
                     <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
                 </div>
                 <span>or use your email for registration</span> -->
-                <input type="text" id="firstname" name="firstname" placeholder="firstname">
-                <input type="text" id="lastname" name="lastname" placeholder="lastname">
-                <!-- <input type="text" id="mobile" name="mobile" placeholder="mobile"> -->
-                <select type="text" id="municipality" name="municipality" placeholder="municipality">
+                <input type="text" id="firstname" name="firstname" placeholder="firstname" required>
+                <input type="text" id="lastname" name="lastname" placeholder="lastname" required>
+                <input type="text" id="mobile" name="mobile" placeholder="mobile" required>
+                <!-- <select type="text" id="municipality" name="municipality" placeholder="municipality">
                     <option value="" disabled selected>municipality</option>
                     <option>Naujan</option>
                 </select>
                 <select type="text" id="barangay" name="barangay" placeholder="barangay">
                         <option value="" disabled selected>barangay</option>
-                    <?php foreach($address as $data){?>
-                        <option><?php echo $data->barangay;?></option>
-                    <?php }?>
-                </select>
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="password" id="password" name="password" placeholder="Password">
+                    <?//php foreach($address as $data){?>
+                        <option><?//php echo $data->barangay;?></option>
+                    <?//php }?>
+                </select> -->
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <button type="submit">Register</button>
             </form>
         </div>
@@ -45,13 +45,13 @@
                 <h1>Sign In</h1>
                 <?= isset($msg)? $msg:''?>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                    <!-- <a href="#" class="social"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="social"><i class="fa fa-google"></i></a>
-                    <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin"></i></a> -->
                 </div>
-                <span>or use your account</span>
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="password" id="password" name="password" placeholder="Password">
+                <!-- <span>or use your account</span> -->
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <a class="small" href="<?=site_url('userforgotpassword')?>">Forgot Password?</a>
 
                 <button type="submit"> Login</button>
