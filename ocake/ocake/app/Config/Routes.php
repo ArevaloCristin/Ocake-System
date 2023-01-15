@@ -37,9 +37,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+# LANDING PAGE
+$routes->get('/', 'User::index');
+
 //---------------- PERSONAL CONTROLLER ROUTING ----------------//
 $routes->get('/personal', 'Personal::index');
-$routes->get('/', 'Personal::signin');
 $routes->get('/signup', 'Personal::signup');
 $routes->get('/logout', 'Personal::logout');
 $routes->get('/signin', 'Personal::signin');
@@ -49,25 +51,24 @@ $routes->post('/login', 'Personal::login');
 
 
 //------------- ADMINISTRATION CONTROLLER ROUTING -------------//
+
+# ADMIN DEFAULT
+$routes->get('admin/default_admin', 'Administration::restore_default_admin');
+
 // Admin Registration and Login
 $routes->get('/administration', 'Administration::index');
-$routes->get('/', 'Administration::signin');
+$routes->get('/admin', 'Administration::signin');
 $routes->get('/admin-signup', 'Administration::signup');
 $routes->get('/admin-signin', 'Administration::signin');
 // $routes->get('/', 'Home::index');
-// $routes->get('admin/logout', 'Administration::logout');
+$routes->get('admin/logout', 'Administration::logout');
 # POST METHOD ROUTING #
-$routes->post('/create_account', 'Administration::save');
 $routes->post('/login_account', 'Administration::login');
 
 
 //----------------- ADMIN CONTROLLER ROUTING -----------------//
-$routes->get('/dashboard', 'Admin::dashboard');
+$routes->get('admin-dashboard', 'Admin::dashboard');
 $routes->get('/admin/product', 'Admin::product');
-//$routes->get('/admin/category', 'Admin::category');
-// $routes->get('/login', 'Admin::login');
-// $routes->get('/register', 'Admin::register');
-// $routes->get('/utilities', 'Admin::utilities');
 $routes->get('/forgotpassword', 'Admin::forgotpassword');
 $routes->get('/admin/orders', 'Admin::orders');
 $routes->post('/order/update_order/(:any)', 'Admin::order_update/$1/$2');
@@ -96,12 +97,11 @@ $routes->post('/admin/customization/add_addons', 'CustomizationController::add_a
 $routes->get('/admin/customization/add_ons', 'CustomizationController::add_ons');
 $routes->post('/admin/customization/add_ons', 'CustomizationController::add_ons');
 
-$routes->post('/admin/customization/update_design/(:any)', 'CustomizationController::design_update/$1/$2');
-$routes->get('/admin/customization/delete_design/(:any)', 'CustomizationController::design_delete/$1/$2');
-$routes->post('/admin/customization/add_design', 'CustomizationController::add_design');
-$routes->get('/admin/customization/design', 'CustomizationController::design');
-$routes->post('/admin/customization/design', 'CustomizationController::design');
-
+$routes->post('/admin/customization/update_flavor/(:any)', 'CustomizationController::flavor_update/$1/$2');
+$routes->get('/admin/customization/delete_flavor/(:any)', 'CustomizationController::flavor_delete/$1/$2');
+$routes->post('/admin/customization/add_flavor', 'CustomizationController::add_flavor');
+$routes->get('/admin/customization/flavor', 'CustomizationController::flavor');
+$routes->post('/admin/customization/flavor', 'CustomizationController::flavor');
 
 //------------------ USER CONTROLLER ROUTING ------------------//
 $routes->get('/home', 'User::index');
@@ -109,15 +109,10 @@ $routes->get('/userforgotpassword', 'User::userforgotpassword');
 $routes->get('/about', 'User::about');
 $routes->get('/contact', 'User::contact');
 $routes->get('/customization', 'User::customization');
-// $routes->get('/custom', 'User::custom');
-// $routes->get('/clone', 'User::clone');
-// $routes->get('/copy', 'User::copy');
-// $routes->get('/paste', 'User::paste');
-// $routes->get('/cust', 'User::cust');
- $routes->get('/cop', 'User::cop');
-// $routes->get('/add_custom', 'User::add_custom');        //Customization
 $routes->get('/cart', 'User::cart');
-$routes->get('/orderdetails', 'User::orderdetails');
+
+$routes->post('/orderdetails', 'User::orderdetails');
+$routes->get('/orders', 'User::userOrders');
 $routes->post('/cancel_order/(:any)', 'User::cancel_order/$1/$2');
 $routes->post('/order_received/(:any)', 'User::order_received/$1/$2');
 $routes->get('/checkout', 'User::checkout');
@@ -127,7 +122,7 @@ $routes->get('/faq', 'User::faq');
 $routes->get('/modal', 'User::modal');
 $routes->get('/popular', 'User::popular');
 
-$routes->get('/productdetails', 'User::productdetails');
+$routes->post('/productdetails', 'User::productdetails');
 
 $routes->get('/birthday', 'User::getBDay');
 $routes->get('/christening', 'User::getChristening');
@@ -137,6 +132,10 @@ $routes->get('/valentine', 'User::getValentine');
 $routes->get('/graduation', 'User::getGrad');
 $routes->get('/newyear', 'User::getNewYear');
 $routes->get('/wedding', 'User::getWedding');
+$routes->get('/get_shape', 'User::get_shape');
+
+$routes->post('/save_design', 'User::saveFinalDesign');
+$routes->get('/custom_design', 'User::getCustomDesign');
 
 
 //-------------------- CART CONTROLLER ROUTING ---------------------//
