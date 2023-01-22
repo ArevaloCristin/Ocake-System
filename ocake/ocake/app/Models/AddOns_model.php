@@ -11,8 +11,15 @@ class AddOns_model extends Model
 
     //---------- FETCH ADDONS ----------//  December 18,2022
     public function fetchAddOns() {
-        return $this->select('*')
-                    ->get()->getResult();
+        $session= session();
+        if($session->type == "admin"){
+            return $this->select('*')
+                        ->get()->getResult();
+        }elseif($session->type == "user"){
+            return $this->select('*')
+                        ->where('addons_status',"Available")
+                        ->get()->getResult();
+        }
     }
 
     //---------- DELETE ADDONS ----------//  December 18,2022
