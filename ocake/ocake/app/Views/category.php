@@ -89,9 +89,20 @@
                                             <td class="text-center">&#8369 <?php echo $data->price; ?></td>
                                             <td class="text-center"> <img
                                                     src="http://localhost/ocake/uploads/<?php echo $data->image;?>"
-                                                    height="100px" width="150px" alt="image">
+                                                    height="50px" width="75px" alt="image">
                                             </td>
-                                            <td class="text-center"><?php echo $data->status; ?></td>
+                                            <td>
+                                                <div style="text-align:center">
+                                                    <input class="" type="button" 
+                                                    style="justify-content:center; border-radius:5px; color:#ffffff;
+                                                        <?php if($data->status=="Available"){
+                                                            echo "background-color:#25b831; border-color:#25b831";
+                                                        }elseif($data->status=="Unavailable"){
+                                                             echo "background-color:#ed2f2f; border-color:#ed2f2f";
+                                                        } ?>
+                                                    " value="<?=$data->status;?>">
+                                                </div>
+                                            </td>
                                             <td>
                                                 <div style="text-align:center">
                                                 <a style="color:red; margin-right:5px; align-items:center" class="text-center"
@@ -121,7 +132,9 @@
                                                                     enctype="multipart/form-data">
                                                                     <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
 
-                                                                    <label for="status">Status:</label><br>
+                                                                    <input type="hidden" name="prod_id"
+                                                                        value="<?php echo $data->id?>">
+                                                                    <label for="status">Status:</label>
                                                                     <select name="status" class="form-control"
                                                                         id="status">
                                                                         <option
@@ -131,17 +144,16 @@
                                                                             <?php if($data->status == "Unavailable"){ echo "selected"; }?>
                                                                             value="Unavailable">Unavailable</option>
                                                                     </select>
-                                                                    <input type="hidden" name="prod_id"
-                                                                        value="<?php echo $data->id?>"><br>
-                                                                    <label for="Flavor">Flavor:</label><br>
+                                                                    
+                                                                    <label for="Flavor">Flavor:</label>
                                                                     <input type="text" class="form-control" id="flavor"
                                                                         name="flavor"
-                                                                        value="<?php echo $data->flavor?>"><br>
+                                                                        value="<?php echo $data->flavor?>">
 
-                                                                    <label for="Price">Price:</label><br>
+                                                                    <label for="Price">Price:</label>
                                                                     <input type="text" class="form-control " id="price"
                                                                         name="price"
-                                                                        value="<?php echo $data->price?>"><br>
+                                                                        value="<?php echo $data->price?>">
 
                                                                     <div class="mt-3">
                                                                         <div id="alertMessage"
