@@ -15,49 +15,114 @@ class Product_model extends Model{
   }
   //------------- CATEGORY RETRIEVE ---------------//  November 28,2022
   public function getBDay($occasion) {
+    $session= session();
+    if($session->type == "admin"){
       return $this->select('*')->where('occasion', $occasion)
                   ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getChristening($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getWedding($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getGrad($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getValentine($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getHalloween($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getChristmas($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
 
   public function getNewYear($occasion) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->get()->getResult();
+    $session= session();
+    if($session->type == "admin"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->get()->getResult();
+    }if($session->type == "user"){
+      return $this->select('*')->where('occasion', $occasion)
+                  ->where('status', "Available")
+                  ->get()->getResult();
+    }
   }
+  // public function getCustomized($occasion, $id) {
+  //   return $this->select('*')->where('occasion', $occasion)
+  //               ->where('userid', $id)
+  //               ->get()->getResult();
+  // }
+
   public function getCustomized($occasion, $id) {
-    return $this->select('*')->where('occasion', $occasion)
-                ->where('userid', $id)
-                ->get()->getResult();
-  }
+    return $this->db->table('product as po')
+                    ->select('*')
+                    ->join('users as u','u.id=po.userid')
+                    ->where('po.occasion', $occasion)
+                    ->where('po.userid', $id)
+                    ->get()->getResult();
+}
 
   //---------------- DELETE PRODUCT ---------------//  November 28,2022
   public function prod_delete($id){
@@ -70,7 +135,7 @@ class Product_model extends Model{
   }
 
   //---------- INSERT CUSTOMIZED DESIGN ----------//  November 29,2022
-  public function insertDesign($user_id, $img, $message, $flavor, $price, $status) {
+  public function insertDesign($user_id, $img, $message, $flavor, $price) {
     $data = [
       'image' => $img,
       'occasion' => 'Customized',
@@ -79,7 +144,6 @@ class Product_model extends Model{
       'price' => $price,
       'is_customized' => 1,
       'userid' => $user_id,
-      'status' => $status
 		];
 
       $result = $this->insert($data);
