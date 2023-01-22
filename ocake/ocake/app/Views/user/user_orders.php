@@ -87,14 +87,32 @@
                                         <div class="col-lg-1 col-md-2 col-12">
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-12">
-                                            <p><?php echo $data->stat; ?></p>
+                                            <div style="text-align:center">
+                                                    <input class="btn" type="button" 
+                                                    style="justify-content:center; border-radius:5px; color:#ffffff;
+                                                        <?php if($data->stat=="Pending"){
+                                                            echo "background-color:#25b831; border-color:#25b831";
+                                                        }elseif($data->stat=="Confirmed"){
+                                                            echo "background-color:#A7F432; border-color:#A7F432";
+                                                        }elseif($data->stat=="Processing"){
+                                                            echo "background-color:orange; border-color:orange";
+                                                        }elseif($data->stat=="Shipped"){
+                                                            echo "background-color:#03adfc; border-color:#03adfc";
+                                                        }elseif($data->stat=="Delivered"){
+                                                            echo "background-color:#F25278; border-color:#F25278";
+                                                        }elseif($data->stat=="Completed"){
+                                                            echo "background-color:#034efc; border-color:#034efc";
+                                                        }elseif($data->stat=="Cancelled"){
+                                                            echo "background-color:#ed2f2f; border-color:#ed2f2f";
+                                                        } ?>
+                                                    " value="<?=$data->stat;?>">
+                                            </div>
                                         </div>
                                         <div class="col-lg-3 col-md-2 col-12">
-                                        <form action="<?=site_url('orderdetails')?>" method="POST">
-                                                        <input type="hidden" name="details" value="<?=$data->order_code;?>">
-                                                        <input type="submit" role="button" value="View" class="btn btn-primary">
-                                                    </form>
-                                           
+                                            <form action="<?=site_url('orderdetails')?>" method="POST">
+                                                <input type="hidden" name="details" value="<?=$data->order_code;?>">
+                                                <input type="submit" role="button" value="View" class="btn btn-primary">
+                                            </form>
                                         </div>
                                         <!-- <div class="col-lg-3 col-md-2 col-12">
                                             <a class="btn btn-primary" href="<?//php echo site_url('orderdetails/view/')/*.$data->order_code*/; ?>" role="button">View Details</a>
