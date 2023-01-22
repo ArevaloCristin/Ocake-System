@@ -53,6 +53,7 @@
                                 data-toggle="modal" data-target="#myModal1">+ Add
                             </button>
                         </div><br><br>
+                        <!-- Modal For Add Flavor -->
                             <div class="modal fade" id="myModal1"
                                 role="dialog">
                                 <div class="modal-dialog" >
@@ -133,7 +134,18 @@
                                             <tr>
                                                 <td class="text-center"> <?php echo $num++; ?></td>
                                                 <td class="text-center"><?=$data->flavor;?></td>
-                                                <td class="text-center"><?=$data->flavor_status;?></td>
+                                                <td>
+                                                    <div style="text-align:center">
+                                                        <input class="" type="button" 
+                                                        style="justify-content:center; border-radius:5px; color:#ffffff;
+                                                            <?php if($data->flavor_status=="Available"){
+                                                                echo "background-color:#25b831; border-color:#25b831";
+                                                            }elseif($data->flavor_status=="Unavailable"){
+                                                                echo "background-color:#ed2f2f; border-color:#ed2f2f";
+                                                            } ?>
+                                                        " value="<?=$data->flavor_status;?>">
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     <div style="text-align:center">
                                                     <button class="center" type="button" style="justify-content:center; color:green; border:none; background:none;"
