@@ -37,7 +37,6 @@
 
             <!-- Main Content -->
             <div id="content">
-
                 <?php echo view('admin/include/topbar'); ?>
 
                 <!-- Begin Page Content -->
@@ -85,42 +84,109 @@
                                     </tfoot>
                                     
                                     <tbody>
-
                                     <?php $num = 1; foreach($order as $data){?>
                                         <tr>
                                             <td class="text-center"> <?php echo $num++; ?></td>
                                             <td class="text-center"><?=$data->order_code?></td>
                                             <td class="text-center"><?=$data->firstname?> <?=$data->lastname?></td>
-                                            <td class="text-center"><?=$data->items;?>
-                                                <?php if ($cart_count > 1){
+                                            <td class="text-center"><?=$data->items?>
+                                                <?php if ($data->items > 1){
                                                    echo "Items";
                                                 }else{
                                                     echo "Item";
                                                 }?>
                                             </td>
-                                            <!-- <td class="text-center"><img style="height:30px" src="http://localhost/ocake/uploads/<?//php echo $data->image;?>" alt="" srcset=""></td> -->
-                                            <!-- <td class="text-center"><?//=$data->quantity;?></td> -->
-                                            <td class="text-center"><?=$data->total_price;?></td>
-                                            <td class="text-center"><?=$data->stat;?></td>
+                                            <td class="text-center"><?='&#8369;' . number_format ($data->total_price);?></td>
+                                            <td> 
+                                                <div style="text-align:center">
+                                                    <input class="" type="button" 
+                                                    style="justify-content:center; border-radius:5px; color:#ffffff;
+                                                        <?php if($data->stat=="Pending"){
+                                                            echo "background-color:#25b831; border-color:#25b831";
+                                                        }elseif($data->stat=="Confirmed"){
+                                                            echo "background-color:#A7F432; border-color:#A7F432";
+                                                        }elseif($data->stat=="Processing"){
+                                                            echo "background-color:orange; border-color:orange";
+                                                        }elseif($data->stat=="Shipped"){
+                                                            echo "background-color:#03adfc; border-color:#03adfc";
+                                                        }elseif($data->stat=="Delivered"){
+                                                            echo "background-color:#F25278; border-color:#F25278";
+                                                        }elseif($data->stat=="Completed"){
+                                                            echo "background-color:#034efc; border-color:#034efc";
+                                                        }elseif($data->stat=="Cancelled"){
+                                                            echo "background-color:#ed2f2f; border-color:#ed2f2f";
+                                                        } ?>
+                                                    " value="<?=$data->stat;?>">
+                                                </div>
+                                            </td>
                                             <td>
                                                 <div style="text-align:center">
-                                                <button class="center" type="button" style="justify-content:center; color:#3388FF; border:none; background:none;"
+                                                    <!-- <span><input class="btn btn-success" type="button" style="justify-content:center" value="Items"
+                                                        data-toggle="modal" data-target="#ModalItems<?//php echo $data->checkout_id;?>"></span>
+                                                    <input class="btn btn-info" type="button" style="justify-content:center" value="Details"
+                                                        data-toggle="modal" data-target="#myModal<?//php echo $data->checkout_id;?>"> -->
+                                                <button class="center" type="button" style="justify-content:center; color:#dc1877; border:none; background:none;"
+                                                    data-toggle="modal" data-target="#ModalItems<?php echo $data->checkout_id;?>">
+                                                    <i class='fas fa-birthday-cake'></i>
+                                                </button>
+                                                <button class="center" type="button" style="justify-content:center; color:#007bff; border:none; background:none;"
                                                     data-toggle="modal" data-target="#myModal<?php echo $data->checkout_id;?>">
-                                                    <i class='fas fa-eye'></i>
+                                                    <i class='fas fa-clipboard-list'></i>
                                                 </button>
                                                 </div>
-                                                <?php foreach($details as $data){?>
-                                                    <div class="modal fade" id="myModal<?php echo $data->checkout_id;?>"
-                                                        role="dialog">
+                                                <!-- Modal For Order Items-->
+                                                    <div class="modal fade"  id="ModalItems<?php echo $data->checkout_id;?>" role="dialog">
                                                         <div class="modal-dialog" >
                                                                 <!-- Modal content-->
-                                                            <div class="modal-content">
+                                                            <div class="modal-content" style="width:600px">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Order Items</h4>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal">&times;</button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="container">
+                                                                            <?php foreach($details as $datum){?>
+                                                                                <?php if($data->order_code==$datum->order_code) {?>
+                                                                                    <div class="p-3">
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-6 col-12">
+                                                                                                <?php if($datum->is_customized == 0) {?>
+                                                                                                    <img style="height:160px" src="http://localhost/ocake/uploads/<?php echo $datum->image;?>" alt="<?php echo $datum->flavor;?>">
+                                                                                                <?php }else{?>
+                                                                                                    <img style="height:160px" src="<?php echo $datum->image;?>" alt="<?php echo $datum->flavor;?>">
+                                                                                                <?php }?><br>
+                                                                                            </div>
+                                                                                            <div class="col-lg-6 col-12">
+                                                                                                <span><b>Ocassion:</b> <?php echo $datum->occasion; ?> Cake</span><br>
+                                                                                                <span><b>Flavor:</b> <?php echo $datum->flavor; ?> Flavor</span><br>
+                                                                                                <span><b>Price:</b> <?php echo '&#8369;' . number_format ($datum->price); ?></span><br>
+                                                                                                <span><b>Quantity:</b> x<?php echo $datum->quantity; ?></span><br>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                <?php }?>
+                                                                            <?php }?>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default"
+                                                                            data-dismiss="modal">Close</button>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <!-- Modal For Order Details-->
+                                                <?php foreach($details as $datum){?>
+                                                    <div class="modal fade"  id="myModal<?php echo $data->checkout_id;?>" role="dialog">
+                                                        <div class="modal-dialog" >
+                                                                <!-- Modal content-->
+                                                            <div class="modal-content" style="width:600px">
                                                                     <div class="modal-header">
                                                                         <h4 class="modal-title">Order Details</h4>
                                                                         <button type="button" class="close"
                                                                             data-dismiss="modal">&times;</button>
                                                                     </div>
-                                                                
                                                                     <div class="modal-body">
                                                                         <form class="mt-2"
                                                                             action="<?php echo site_url('order/update_order/'.$data->checkout_id); ?>"
@@ -129,19 +195,31 @@
                                                                             <?php if(session('success')){ echo session('success');}else{ echo session('error');}?>
                                                                             
                                                                             <div class="mb-3">
-                                                                                <label for="Order ID">Order ID: <?php echo $data->checkout_id?></label><br>
-                                                                                <label for="Name">Customer Name: <?php echo $data->firstname?> <?php echo $data->lastname?>  </label><br>
-                                                                                <label for="Address">Address: <?php echo $data->mobile?></label><br>
-                                                                                <label for="Phone Number">Phone Number: </label><br>
-                                                                                <label for="Purchased Items">Purchased Items: <?php echo $data->quantity?></label><br>
-                                                                                <label for="Total Price">Total Price: <?php echo $data->total_price?></label><br>
-                                                                                <label for="Payment Method">Payment Method: <?php echo $data->payment_method?></label><br>
-                                                                                <label for="Delivery Method">Delivery Method: <?php echo $data->delivery_method?></label><br>
-                                                                                <label for="Scheduled Delivery Date">Scheduled Delivery Date: <?php echo $data->date?></label><br>
-                                                                                <label for="Scheduled Delivery Date">Order Status: <?php echo $data->stat?></label><br>
+                                                                                <div class="product-details-info">
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-4 col-12">
+                                                                                            <div class="info-body custom-responsive-margin">
+                                                                                                <span><b>Name:</b> </span><?php echo $data->firstname?> <?php echo $data->lastname?><br>
+                                                                                                <span><b>Contact:</b> </span><?php echo $data->mobile?><br>
+                                                                                                <span><b>Purchased Items:</b> </span><?php echo $data->items?><br>
+                                                                                                <span><b>Total Price:</b> </span><?php echo '&#8369;' . number_format ($data->total_price)?><br>
+                                                                                                <span><b>Status:</b> </span><?php echo $data->stat?><br>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-8 col-12">
+                                                                                            <div class="info-body custom-responsive-margin">
+                                                                                                <span><b>Order ID:</b> </span><?php echo $data->order_code?><br>
+                                                                                                <span><b>Payment Method:</b> </span><?php echo $data->payment_method?><br>
+                                                                                                <span><b>Delivery Method:</b> </span><?php echo $data->delivery_method?><br>
+                                                                                                <span><b>Scheduled Delivery Date:</b> </span><?php echo $data->date?><br>
+                                                                                                <span><b>Address:</b> </span><?php echo $data->street?>, <?php echo $data->barangay?>, <?php echo $data->municipality?><br>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div><br>
+                                                                           
                                                                                 <label for="stat">Status:</label><br>
-                                                                                <select name="stat" class="form-control"
-                                                                                    id="stat">
+                                                                                <select name="stat" class="form-control" id="stat">
                                                                                     <option
                                                                                         <?php if($data->stat == "Pending"){ echo "selected"; }?>
                                                                                         value="Pending">Pending</option>
@@ -179,7 +257,6 @@
                                                     </div>
                                                 <?php }?> 
                                             </td>
-                                           
                                         </tr>
                                     <?php }?>
                                     </tbody>
@@ -187,18 +264,13 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
-
             <?php echo view('admin/include/footer'); ?>
-
         </div>
         <!-- End of Content Wrapper -->
-
     </div>
     <!-- End of Page Wrapper -->
 
@@ -206,7 +278,6 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
     <?php echo view('admin/include/logout-modal'); ?>
     <?php echo view('admin/include/photo-script'); ?>
     <?php echo view('admin/include/script'); ?>
