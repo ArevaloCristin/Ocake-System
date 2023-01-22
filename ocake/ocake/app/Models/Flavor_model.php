@@ -8,8 +8,15 @@ class Flavor_model extends Model{
 
     //-------------- FETCH FLAVOR ------------//          December 28,2022
     public function fetchFlavor() {
+        $session= session();
+        if($session->type == "admin"){
         return $this->select('*')
                     ->get()->getResult();
+        }elseif($session->type == "user"){
+            return $this->select('*')
+                        ->where('flavor_status',"Available")
+                        ->get()->getResult();
+        }
     }
 
     //------------- DELETE FLAVOR ------------//          December 28,2022
