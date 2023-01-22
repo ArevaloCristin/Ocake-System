@@ -1,4 +1,4 @@
-<!-- End Header Area -->
+ <!-- End Header Area -->
 
     <div class="breadcrumbs">
         <div class="container">
@@ -50,7 +50,7 @@
                                                                 <input type="hidden" name="flavor" value="<?=$data->flavor;?>">
                                                                 <input type="hidden" name="price" value="<?=$data->price;?>">
                                                                 <input type="hidden" name="pid" value="<?=$data->id;?>">
-                                                                <!-- <input type="hidden" name="img" value="<?=$data->image;?>"> -->
+                                                                <!-- <input type="hidden" name="img" value="<?//=$data->image;?>"> -->
                                                                 <button type="submit" class="btn"><i class="lni lni-cart"></i>
                                                                     Add to Cart</button>
                                                             </form>
@@ -60,10 +60,11 @@
                                                         <!-- <a class="btn btn-outline-primary btn-rounded btn-sm" style="float:right" 
                                                             href="<?//=site_url('productdetails')?>">View Details
                                                         </a> -->
-                                                        <span class="category"> Flavor: <?php echo $data->flavor; ?></span>
                                                         <h4 class="title">
                                                             <a href="product-grids.html"><?php echo $data->occasion; ?> Cake</a>
                                                         </h4>
+                                                        <span class="category"> Flavor: <?php echo $data->flavor; ?></span>
+                                                        <span class="category"> Design by: <?php echo $data->firstname; ?> (You)</span>
                                                         <!-- <ul class="review">
                                                             <li><i class="lni lni-star-filled"></i></li>
                                                             <li><i class="lni lni-star-filled"></i></li>
