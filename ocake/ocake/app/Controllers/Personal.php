@@ -62,7 +62,8 @@ class Personal extends BaseController{
     }
 
     public function logout(){
-        $this->session->destroy();
+        $session=session();
+        $session->destroy();
         return $this->response->redirect(site_url('signin'));
     }
     
