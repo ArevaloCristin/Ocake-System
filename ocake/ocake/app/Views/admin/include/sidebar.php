@@ -1,9 +1,9 @@
-<!-- Sidebar -->
+ <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center"
-        href="<?=site_url('dashboard')?>">
+        href="<?=site_url('admin-dashboard')?>">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -126,7 +126,7 @@
             <span>People</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<?=site_url('admin/statistics')?>">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Statistics</span></a>
     </li>
