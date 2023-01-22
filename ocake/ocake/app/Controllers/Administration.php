@@ -80,7 +80,8 @@ class Administration extends BaseController
     */
 
     public function logout(){
-        $this->session->destroy();
+        $session=session();
+        $session->destroy();
         return redirect()->to(base_url('/admin-signin'));
     }
 
