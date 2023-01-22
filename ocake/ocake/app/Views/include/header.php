@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/order.css" />
 </head>
 
 <body>
@@ -146,12 +147,12 @@
                                 </h3>
                             </div>
                             <div class="navbar-cart">
-                                <div class="wishlist">
+                                <!-- <div class="wishlist">
                                     <a href="javascript:void(0)">
                                         <i class="lni lni-heart"></i>
                                         <span class="total-items">0</span>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div class="cart-items">
                                
                                     <a href="javascript:void(0)" class="main-btn">
@@ -195,7 +196,7 @@
                                                         <h4><a href="<?=site_url('productgrid')?>">
                                                                 <?=$data->flavor; ?></a>
                                                             </h4>
-                                                            <p><?=$data->occasion; ?></p>
+                                                            <p><?=$data->occasion; ?> Cake</p>
                                                         <p class="quantity">x<?=$data->quantity; ?> - <span class="amount"><?='&#8369;'.$data->price; ?></span></p>
                                                     </div>
                                                 </li>
@@ -280,7 +281,10 @@
                                         <a href="<?=site_url('home')?>" class="active"
                                             aria-label="Toggle navigation">Home</a>
                                     </li>
-                                    <li class="nav-item"><a href="<?=site_url('orders')?>">Orders</a></li>
+                                    <li class="nav-item"><a href="<?=site_url('orders')?>">Orders</a>
+                                    <span class="order-items"><?php echo $order_count; ?></span>
+                                </li>
+                                    
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
