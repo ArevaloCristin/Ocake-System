@@ -69,6 +69,7 @@ $routes->post('/login_account', 'Administration::login');
 //----------------- ADMIN CONTROLLER ROUTING -----------------//
 $routes->get('admin-dashboard', 'Admin::dashboard');
 $routes->get('/admin/product', 'Admin::product');
+$routes->get('/admin/statistics', 'Admin::statistics');
 $routes->get('/forgotpassword', 'Admin::forgotpassword');
 $routes->get('/admin/orders', 'Admin::orders');
 $routes->post('/order/update_order/(:any)', 'Admin::order_update/$1/$2');
@@ -110,7 +111,7 @@ $routes->get('/about', 'User::about');
 $routes->get('/contact', 'User::contact');
 $routes->get('/customization', 'User::customization');
 $routes->get('/cart', 'User::cart');
-
+$routes->get('/orderdetails', 'User::orderdetails');
 $routes->post('/orderdetails', 'User::orderdetails');
 $routes->get('/orders', 'User::userOrders');
 $routes->post('/cancel_order/(:any)', 'User::cancel_order/$1/$2');
