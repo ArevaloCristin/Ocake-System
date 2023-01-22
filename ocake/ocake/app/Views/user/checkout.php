@@ -354,7 +354,11 @@
                             <div class="sub-total-price">
                                 <?php foreach($cartData as $data){?>
                                     <div class="total-price">
-                                        <p class="value"><img style="height:40px" src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="I'm Cake"></p>
+                                    <?php if($data->is_customized == 0) {?>
+                                        <img style="height:40px" src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                                            <?php }else{?>
+                                        <img style="height:40px" src="<?php echo $data->image;?>" alt="<?php echo $data->flavor;?>">
+                                            <?php }?><br>
                                         <p class="price"><?= '&#8369;'.$data->price?></p>
                                         <p class="price"><?= '&#8369;'.$data->price * $data->quantity.'.00'?></p> 
                                     </div>
