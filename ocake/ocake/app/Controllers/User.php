@@ -28,6 +28,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
         
         return view('include/header', $data)
             . view('user/index')
@@ -60,6 +66,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
        // $name = $_GET['cart_product'];
 
@@ -91,6 +103,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
         return view('include/header', $data)
             . view('user/about')
@@ -113,6 +131,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
         
         return view('include/header', $data)
             . view('user/contact')
@@ -131,15 +155,29 @@ class User extends BaseController
         // $data['cartData']= $model->getCartData();
         $data['product'] = $model->getBDay($occasion); /*connect to model function */
         $data['occasion'] = $occasion;
+        $data['cartData'] = $model_cart->getCartData($id);
+
+        $total = $model_cart->getCartData($id);
+        $totalprice = 0;
+        foreach ($total as $price) {
+            $totalprice = $totalprice + $price->price;
+        }
+        $data['subtotal'] = $totalprice;
 
         #count cart items#
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
-        // return view('include/header', $data)
-        echo view('user/popular', $data)
+        echo view('include/header', $data)
+            . view('user/popular')
             . view('include/footer');
         }else{
             return $this->response->redirect(site_url('signin'));
@@ -169,6 +207,12 @@ class User extends BaseController
         $cart = $model->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
         
         return view('include/header', $data)
@@ -204,6 +248,11 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
         
         return view('include/header', $data)
             . view('user/order_details')
@@ -223,13 +272,13 @@ class User extends BaseController
         
         if (!$val) {
             $data['validation']  = $this->validator;
-            echo view('orderdetails', $data);
+            echo view('orders', $data);
         }else{
             $data = array(
                 'stat' => $this->request->getVar('received_status'),
             );              
         $model->checkout_update($data,$id);
-            return redirect()->to(base_url('orderdetails'));   
+            return redirect()->to(base_url('orders'));   
         }  
     }
     
@@ -243,17 +292,17 @@ class User extends BaseController
     
         if (!$val) {
             $data['validation']  = $this->validator;
-            echo view('orderdetails', $data);
+            echo view('orders', $data);
         }else{
             $data = array(
                 'stat' => $this->request->getVar('cancel_status'),
              );              
         $model->checkout_update($data,$id);
-        return redirect()->to(base_url('orderdetails'));   
+        return redirect()->to(base_url('orders'));   
         }  
     }
 
-     //------------- FETCH ORDER DETAILS DATA ------------//                 January 04,2023
+     //------------- FETCH USER ORDERS DATA -------------//                 January 04,2023
      public function userOrders(){
         if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
         $id = $_SESSION['user_id'];
@@ -275,6 +324,11 @@ class User extends BaseController
         $cart = $model->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
         
         return view('include/header', $data)
@@ -299,6 +353,13 @@ class User extends BaseController
             $data['cart_count']= $c->count;
         }
 
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
+
         return view('include/header', $data)
             . view('user/productlist')
             . view('include/footer');
@@ -319,6 +380,12 @@ class User extends BaseController
         $cart = $model->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
@@ -341,6 +408,12 @@ class User extends BaseController
         $cart = $model->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
@@ -368,6 +441,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
         return view('include/header', $data)
             . view('user/birthday')
@@ -391,6 +470,12 @@ class User extends BaseController
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
@@ -416,6 +501,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
         return view('include/header', $data)
             . view('user/birthday')
@@ -439,6 +530,12 @@ class User extends BaseController
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
@@ -464,6 +561,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
         return view('include/header', $data)
             . view('user/birthday')
@@ -487,6 +590,12 @@ class User extends BaseController
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
@@ -512,6 +621,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
         return view('include/header', $data)
             . view('user/birthday')
@@ -535,6 +650,12 @@ class User extends BaseController
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
@@ -561,6 +682,12 @@ class User extends BaseController
         $cart = $model->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
             return view('include/header', $data)
                  . view('user/productdetails')
@@ -592,6 +719,12 @@ class User extends BaseController
         foreach($cart as $c){
             $data['cart_count']= $c->count;
         }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
 
         return view('include/header', $data)
             . view('user/customization', $datum)
@@ -613,7 +746,6 @@ class User extends BaseController
                 $this->request->getVar('message'),
                 $this->request->getVar('flavor'),
                 $this->request->getVar('price'),
-                $this->request->getVar('status'),
             );
             $msg = array();
             if($data != null){
@@ -641,6 +773,12 @@ class User extends BaseController
         $cart = $model_cart->count_data($id);
         foreach($cart as $c){
             $data['cart_count']= $c->count;
+        }
+        #count order items#
+        $model_order = new Checkout_model();
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
         }
 
         return view('include/header', $data)
