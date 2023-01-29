@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/order.css" />
+    <link rel="stylesheet" href="assets/css/user.css" />
+    <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -78,15 +81,39 @@
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="top-end">
                             <div class="user">
-                                <i class="lni lni-user"></i>
+                                <i class="lni lni-user" class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                    <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Profile
+                                    </a>
+                                    <!-- <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Settings
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Activity Log
+                                    </a> -->
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
                                 <?php 
                                     if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user")
-                                        echo ucwords($_SESSION['userF_name']); // set first letter to upperCase
+                                        echo ucwords($_SESSION['userF_name']);
+                                        echo ucwords(" ");
+                                        echo ucwords($_SESSION['userL_name']); // set first letter to upperCase
                                 ?>
                             </div>
                             <ul class="user-login">
                                 <!-- <li>
-                                    <a href="<?=site_url('personal')?>">Sign In</a>
+                                    <a href="<?//=site_url('personal')?>">Sign In</a>
                                 </li> -->
                                 <li>
                                     <a href="<?=site_url('logout')?>">Log Out</a>
@@ -375,5 +402,8 @@
             </div>
         </div>
         <!-- End Header Bottom -->
+        <script src="http://localhost/ocake/vendor/jquery/jquery.min.js"></script>
+        <script src="http://localhost/ocake/js/sb-admin-2.min.js"></script>
+        <script src="http://localhost/ocake/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </header>
     <!-- End Header Area -->
