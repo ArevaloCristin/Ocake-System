@@ -15,12 +15,49 @@ class Personal extends BaseController{
     public function signin(){
        return view('auth/signlog');
     }
+    public function verification(){
+        return view('auth/verification');
+     }
 
-    public function save(){
-        $personal_m = new personal_m();
-        $_POST ['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
-        $personal_m->insert($_POST);
-        return $this->response->redirect(site_url('signin'));
+    // public function save(){
+    //     $personal_m = new personal_m();
+    //     $_POST ['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    //     $personal_m->insert($_POST);
+    //     return $this->response->redirect(site_url('signin'));
+    // }
+
+    public function register(){ 
+        $id = $_SESSION['user_id'];                 
+        helper(['form', 'url']);
+        
+        $val = $this->validate([ ]);
+            
+         #generate random code
+        $code = mt_rand(100000, 999999);
+   
+        $user_model = new Personal_m();       
+
+        $data = array(       
+            'firstname'       => $this->request->getVar('firstname'),
+            'lastname'        => $this->request->getVar('lastname'),
+            'email'           => $this->request->getVar('email'),
+            'mobile'          => $this->request->getVar('mobile'),
+            'verification_code' => $code,
+        ); 
+        $insert = $user_model->save_user($data);
+        return $this->response->redirect(site_url('verify'));
+                    
+                     #insert checkout data 
+                    // $checkout_model = new Checkout_model();
+                    // $datum = array(
+                    //         'user_id'         => $id, 
+                    //         'biller_id'       => $insert_biller,
+                    //         'total_price'     => $this->request->getVar('total_price'),
+                    //         'items'           => $this->request->getVar('count'),
+                    //         'order_code'      => $random,
+                    // );
+                    // $insert_checkout= $checkout_model->save_checkout($datum);
+                    // return redirect('verification');  
     }
 
     public function login(){
