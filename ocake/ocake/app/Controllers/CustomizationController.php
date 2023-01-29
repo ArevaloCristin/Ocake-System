@@ -64,7 +64,7 @@ class CustomizationController extends BaseController
     public function addons_update($id){
         /*this will validate inputs */
         $val = $this->validate([
-            'quantity' => 'required',
+            // 'quantity' => 'required',
             'description' => 'required',
             'price' => 'required',
             'addons_status' => 'required',           
@@ -82,7 +82,7 @@ class CustomizationController extends BaseController
 
            if($imageFile == ""){
                $data = array(
-                    'quantity' => $this->request->getVar('quantity'),
+                    // 'quantity' => $this->request->getVar('quantity'),
                     'description' => $this->request->getVar('description'),
                     'price' => $this->request->getVar('price'),
                     'addons_status' => $this->request->getVar('addons_status'),
@@ -93,7 +93,7 @@ class CustomizationController extends BaseController
 
                /*this will insert data to db */
                $data = array(
-                    'quantity' => $this->request->getVar('quantity'),
+                    // 'quantity' => $this->request->getVar('quantity'),
                     'description' => $this->request->getVar('description'),
                     'price' => $this->request->getVar('price'),
                     'addons_status' => $this->request->getVar('addons_status'),
