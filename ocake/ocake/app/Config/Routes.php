@@ -45,8 +45,11 @@ $routes->get('/personal', 'Personal::index');
 $routes->get('/signup', 'Personal::signup');
 $routes->get('/logout', 'Personal::logout');
 $routes->get('/signin', 'Personal::signin');
+$routes->get('/verification', 'Personal::verification');
 # POST METHOD ROUTING #
-$routes->post('/save', 'Personal::save');
+// $routes->post('/save', 'Personal::save');
+$routes->post('/save', 'Personal::register');
+$routes->post('/verify', 'Personal::verify');
 $routes->post('/login', 'Personal::login');
 
 
@@ -112,6 +115,8 @@ $routes->get('/contact', 'User::contact');
 $routes->get('/customization', 'User::customization');
 $routes->get('/cart', 'User::cart');
 $routes->get('/orderdetails', 'User::orderdetails');
+$routes->get('/completedorder', 'User::completedOrder');
+$routes->get('/cancelledorder', 'User::cancelledOrder');
 $routes->post('/orderdetails', 'User::orderdetails');
 $routes->get('/orders', 'User::userOrders');
 $routes->post('/cancel_order/(:any)', 'User::cancel_order/$1/$2');
