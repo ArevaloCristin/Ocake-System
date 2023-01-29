@@ -142,7 +142,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Image</th>
-                                                <th>Stock</th>
+                                                <!-- <th>Stock</th> -->
                                                 <th>Description</th>
                                                 <th>Price</th>
                                                 <th>Status</th>
@@ -154,7 +154,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Image</th>
-                                                <th>Stock</th>
+                                                <!-- <th>Stock</th> -->
                                                 <th>Description</th>
                                                 <th>Price</th>
                                                 <th>Status</th>
@@ -170,7 +170,7 @@
                                                 <tr>
                                                     <td class="text-center"> <?php echo $num++; ?></td>
                                                     <td class="text-center"><img style="height:30px" src="http://localhost/ocake/uploads/<?php echo $data->image;?>" alt="" srcset=""></td>
-                                                    <td class="text-center"><?=$data->quantity;?></td>
+                                                    <!-- <td class="text-center"><?=$data->quantity;?></td> -->
                                                     <td class="text-center"><?=$data->description;?></td>
                                                     <td class="text-center"><?='&#8369;' . number_format ($data->price);?></td>
                                                     <td>
@@ -230,10 +230,10 @@
                                                                                         value="<?php echo $data->description?>">
 
 
-                                                                                    <label for="Stock">Stock:</label>
+                                                                                    <!-- <label for="Stock">Stock:</label>
                                                                                     <input type="text" class="form-control" id="quantity"
                                                                                         name="quantity"
-                                                                                        value="<?php echo $data->quantity?>">
+                                                                                        value="<?//php echo $data->quantity?>"> -->
 
                                                                                     <label for="Price">Price:</label><br>
                                                                                     <input type="text" class="form-control " id="price"
