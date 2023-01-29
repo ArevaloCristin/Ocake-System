@@ -80,6 +80,28 @@ class Checkout_model extends Model
                         ->join('biller_details as b','b.biller_id=co.biller_id')
                         ->join('users as u','u.id=co.user_id')
                         ->where('co.user_id', $id)
+                        ->where ('stat !=', "Completed")
+                        ->where('stat !=', "Cancelled")
+                        ->groupBy('co.created_at')
+                        ->get()->getResult();
+    }
+    public function getCompleted($id){
+        return $this->db->table('checkout as co')
+                        ->select('*')
+                        ->join('biller_details as b','b.biller_id=co.biller_id')
+                        ->join('users as u','u.id=co.user_id')
+                        ->where('co.user_id', $id)
+                        ->where('stat',"Completed")
+                        ->groupBy('co.created_at')
+                        ->get()->getResult();
+    }
+    public function getCancelled($id){
+        return $this->db->table('checkout as co')
+                        ->select('*')
+                        ->join('biller_details as b','b.biller_id=co.biller_id')
+                        ->join('users as u','u.id=co.user_id')
+                        ->where('co.user_id', $id)
+                        ->where('stat',"Cancelled")
                         ->groupBy('co.created_at')
                         ->get()->getResult();
     }
