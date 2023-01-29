@@ -31,6 +31,17 @@
                                 <div class="tab-pane fade show active" id="nav-grid" role="tabpanel"
                                     aria-labelledby="nav-grid-tab">
                                     <div class="row">
+                                        <?php if(empty($product)){
+                                            echo '
+                                                <div class="d-flex flex-wrap justify-content-xl-between" >
+                                                    <div class="col-lg-12 col-md-12 col-12">
+                                                        <div class ="text-muted" style="font-size:25px; text-align:center; margin-top:7%; margin-bottom:5%">
+                                                            No customized cake found.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ';
+                                        }?>
                                         <?php $num = 1;     
                                         foreach ($product as $data) { ?>
                                             <div class="col-lg-3 col-md-5 col-12">
@@ -101,7 +112,6 @@
                     </div>
                 </div>
             </div>
-        
         </div>
     </section>
     <a href="#" class="scroll-top">
