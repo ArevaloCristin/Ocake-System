@@ -3,14 +3,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="breadcrumbs-content">
-                    <h1 class="page-title">Orders</h1>
+                    <h1 class="page-title">Your Orders</h1>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="breadcrumb-nav">
                     <li><a href="<?=site_url('home')?>"><i class="lni lni-home"></i> Home</a></li>
                     <!-- <li><a href="<?//=site_url('productlist')?>">Shop</a></li> -->
-                    <li>Orders</li>
+                    <li>Your Orders</li>
                 </ul>
             </div>
         </div>
@@ -21,11 +21,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="http://localhost/ocake/assets/css/order.css" rel="stylesheet">
         <link href="http://localhost/ocake/assets/css/orderdetails.css" rel="stylesheet">
+        
+<div class="btn-group mt-3 " style="margin-left:8%">
+  <a href="<?=site_url('orders')?>" class="btn btn-primary" role="button" style="background-color:#d10f94; border-color:#d10f94">Orders</a>
+  <a href="<?=site_url('completedorder')?>" class="btn btn-primary" role="button">Completed</a>
+  <a href="<?=site_url('cancelledorder')?>" class="btn btn-primary" role="button">Cancelled</a>
+</div>
 
-<div class="shopping-cart section">
+<div class="mt-5 mb-5">
     <div class="container">
         <div class="cart-list-head">
-            <div class="p-3 text-center text-white text-lg  rounded-top" style="background-color:#d10f94"><span class="text-uppercase">Your Orders </span></div>
+            <div class="p-3 text-center text-white text-lg  rounded-top" style="background-color:#d10f94"><span class="text-uppercase">Current Orders </span></div>
             
             <div class="cart-single-list">
                 <div class="row">
@@ -65,6 +71,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php if(empty($status)){
+								echo '
+                                    <div class="d-flex flex-wrap justify-content-xl-between" >
+                                        <div class="col-lg-12 col-md-12 col-12">
+											<div class ="text-muted" style="font-size:25px; text-align:center; margin-top:7%; margin-bottom:5%">
+												No orders found.
+											</div>
+										</div>
+									</div>
+                                ';
+							}?>
                             <?php foreach ($status as $data) {?>
                                 <div class="pt-3 pb-3 text-center cart-single-list flex-wrap flex-sm-nowrap justify-content-between py-2 px-2 bg-secondary">
                                     <div class="row align-items-center">
