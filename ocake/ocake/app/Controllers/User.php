@@ -789,6 +789,78 @@ class User extends BaseController
         }
     }
 
+    //-------------- FETCH USER CCOMPLETED ORDERS -------------//                    January 22,2023
+    public function completedOrder(){
+        if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
+        $id = $_SESSION['user_id'];
+        $model_product = new Product_model();
+        $model = new Cart_m();
+        $data['productData'] = $model_product->fetchProduct();
+        $data['cartData'] = $model->getCartData($id);
+        $total = $model->getCartData($id);
+        $totalprice = 0;
+        foreach ($total as $price) {
+            $totalprice = $totalprice + $price->price;
+        }
+        $data['subtotal'] = $totalprice;
 
+        $model_order = new Checkout_model();
+        $data['status']= $model_order->getCompleted($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
+        
+        return view('include/header', $data)
+            . view('user/completed_order')
+            . view('include/footer');
+        }else{
+            return $this->response->redirect(site_url('signin'));
+        }
+    }
+
+    //-------------- FETCH USER CANCELLED ORDERS -------------//                    January 22,2023
+    public function cancelledOrder(){
+        if(isset($_SESSION['logged_in']) == true && isset($_SESSION['type']) == "user"){
+        $id = $_SESSION['user_id'];
+        $model_product = new Product_model();
+        $model = new Cart_m();
+        $data['productData'] = $model_product->fetchProduct();
+        $data['cartData'] = $model->getCartData($id);
+        $total = $model->getCartData($id);
+        $totalprice = 0;
+        foreach ($total as $price) {
+            $totalprice = $totalprice + $price->price;
+        }
+        $data['subtotal'] = $totalprice;
+
+        $model_order = new Checkout_model();
+        $data['status']= $model_order->getCancelled($id);
+
+        #count cart items#
+        $cart = $model->count_data($id);
+        foreach($cart as $c){
+            $data['cart_count']= $c->count;
+        }
+
+        $order = $model_order->count_orders($id);
+        foreach($order as $o){
+            $data['order_count']= $o->count;
+        }
+        
+        return view('include/header', $data)
+            . view('user/cancelled_order')
+            . view('include/footer');
+        }else{
+            return $this->response->redirect(site_url('signin'));
+        }
+    }
 
 }
